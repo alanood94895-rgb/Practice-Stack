@@ -7,8 +7,8 @@ public class ParenthesesValidator {
 
         ParenthesesValidator.push("(((");
         ParenthesesValidator.push(")))");
-        ParenthesesValidator.push("(((");
-        ParenthesesValidator.push("(((");
+        ParenthesesValidator.push("[[[]]]");
+        ParenthesesValidator.push("]]]");
         ParenthesesValidator.push("(((");
 
 
