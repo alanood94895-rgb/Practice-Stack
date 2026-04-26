@@ -12,6 +12,7 @@ public class BrowserNavigationSystem {
     static String currentPage = "Home";
 
     // Limit for back history
+    static final int MAX_HISTORY = 10;
 
 
 }
