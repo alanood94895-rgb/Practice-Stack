@@ -10,6 +10,7 @@ public class DecimalToBinaryConverter {
             System.out.println("Decimal: " + decimal);
             DisplayConversionProcess(decimal);
             String binary = decimalToBinary(decimal);
+            System.out.println("Binary (Stack method): " + binary);
 
     }
 
