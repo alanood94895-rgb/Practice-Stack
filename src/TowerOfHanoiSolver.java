@@ -19,5 +19,11 @@ public class TowerOfHanoiSolver {
         pegC.clear();
         moveCount = 0;
 
+        // Add disks (largest at bottom, smallest at top)
+        for (int i = numDisks; i >= 1; i--) {
+            pegA.push(i);
+        }
+    }
+
 }
 }
