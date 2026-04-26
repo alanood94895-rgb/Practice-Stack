@@ -42,7 +42,7 @@ public class DecimalToBinaryConverter {
             temp = temp / 2;
         }
 
-        // Build binary string by popping
+        // Build binary string
         String binary = "";
 
         while (!stack.isEmpty()) {
