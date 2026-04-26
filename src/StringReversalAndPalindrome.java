@@ -31,15 +31,18 @@ public class StringReversalAndPalindrome {
 
     public static String reverseString(String s) {
         Stack<Character> stack = new Stack<>();
+
         //check if empty or null or length ==1
         if (s == null) return null;
         if (s.length() == 0) return "";
         if (s.length() == 1) return s;
         String result = "";
+
         //push character from string s
         for (int i = 0; i < s.length(); i++) {
             stack.push(s.charAt(i));
         }
+
         //added pushed character to result ..reversed string
         for (int i = 0; i < s.length(); i++) {
             result += stack.pop();
@@ -48,6 +51,7 @@ public class StringReversalAndPalindrome {
     }
 
     public static Boolean isPalindrome(String s) {
+
         //ignore sensitive case with space
         s=s.toLowerCase().trim();
         //check if isPalindrome
