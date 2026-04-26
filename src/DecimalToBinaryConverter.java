@@ -1,20 +1,33 @@
+import java.util.Stack;
+
 public class DecimalToBinaryConverter {
-    public static void main (String[] args) {
+
+    public static void main(String[] args) {
 
         // 6 test decimal numbers
         int[] numbers = {0, 5, 10, 13, 32, 255};
-        System.out.println("Decimal number");
+
+        System.out.println("Decimal to Binary Conversion");
 
         for (int i = 0; i < numbers.length; i++) {
+
             int decimal = numbers[i];
+
             System.out.println("Decimal: " + decimal);
-            DisplayConversionProcess(decimal);
+
+            displayConversionProcess(decimal);
+
             String binary = decimalToBinary(decimal);
+
             System.out.println("Binary (Stack method): " + binary);
+
             System.out.println("Binary (Built-in): " + Integer.toBinaryString(decimal));
+
+            System.out.println("-----------------------------------");
         }
     }
-    // METHOD 1
+
+    // METHOD 1: Convert decimal to binary using stack
     public static String decimalToBinary(int decimal) {
 
         if (decimal == 0) return "0";
@@ -29,7 +42,8 @@ public class DecimalToBinaryConverter {
             stack.push(remainder);
             temp = temp / 2;
         }
-// Build binary string by popping
+
+        // Build binary string by popping
         String binary = "";
 
         while (!stack.isEmpty()) {
@@ -90,7 +104,4 @@ public class DecimalToBinaryConverter {
 
         return decimal;
     }
-}
-    }
-
 }
