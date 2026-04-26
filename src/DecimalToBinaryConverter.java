@@ -11,6 +11,7 @@ public class DecimalToBinaryConverter {
             DisplayConversionProcess(decimal);
             String binary = decimalToBinary(decimal);
             System.out.println("Binary (Stack method): " + binary);
+            System.out.println("Binary (Built-in): " + Integer.toBinaryString(decimal));
 
     }
 
