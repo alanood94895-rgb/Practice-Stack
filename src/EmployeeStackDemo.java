@@ -2,6 +2,7 @@ import java.util.Stack;
 
 public class EmployeeStackDemo {                     // Create the main class
     public static void main (String[] args){
+        // Create the Stack
         Stack <String> employeeAction = new Stack<>();
         employeeAction.push("A logged in");
         employeeAction.push("B updated client records");
