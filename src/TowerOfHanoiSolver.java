@@ -91,6 +91,5 @@ public class TowerOfHanoiSolver {
         System.out.println("A: " + pegA);
         System.out.println("B: " + pegB);
         System.out.println("C: " + pegC);
-        System.out.println("------------------");
     }
 }
