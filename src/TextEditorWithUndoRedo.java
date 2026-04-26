@@ -27,7 +27,7 @@ public class TextEditorWithUndoRedo {
         display();
     }
 
-    // TYPE method (adds text)
+    // type method (adds text)
     public static void type(String newText) {
 
         // Save current state for undo
