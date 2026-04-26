@@ -22,8 +22,14 @@ public class TowerOfHanoiSolver {
         // Add disks (largest at bottom, smallest at top)
         for (int i = numDisks; i >= 1; i--) {
             pegA.push(i);
+
         }
     }
+    // Get peg reference based on name
+    public static Stack<Integer> getPeg(char peg) {
+        if (peg == 'A') return pegA;
+        if (peg == 'B') return pegB;
+        return pegC;
 
 }
 }
