@@ -14,7 +14,7 @@ public class TowerOfHanoiSolver {
 
         for (int n : tests) {
 
-            System.out.println("Solving for " + n + " disks\n");
+            System.out.println("Solving for " + n + " disks");
 
             initializePegs(n);
             displayPegs();
@@ -24,7 +24,6 @@ public class TowerOfHanoiSolver {
             System.out.println("Total moves: " + moveCount);
             System.out.println("Expected: " + ((int)Math.pow(2, n) - 1));
 
-            System.out.println("=========================\n");
         }
     }
 
