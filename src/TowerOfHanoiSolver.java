@@ -57,6 +57,8 @@ public class TowerOfHanoiSolver {
         to.push(disk);
 
         moveCount++;
+        System.out.println("Peg A: " + pegA);
+
 
 
 
