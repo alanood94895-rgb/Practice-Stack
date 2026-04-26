@@ -11,6 +11,7 @@ public class EmployeeStackDemo {                     // Create the main class
         employeeAction.push("employee Hoor approved leave request");
         employeeAction.push("employee Alanoud logged out");
 
+        // Display all elements
         System.out.println(employeeAction);
 
         employeeAction.push("employee Said change Passwords");
