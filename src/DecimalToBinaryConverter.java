@@ -86,7 +86,7 @@ public class DecimalToBinaryConverter {
         }
     }
 
-    // BONUS: Binary to Decimal conversion
+    // Binary to Decimal conversion
     public static int binaryToDecimal(String binary) {
 
         int decimal = 0;
