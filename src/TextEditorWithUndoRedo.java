@@ -13,7 +13,7 @@ public class TextEditorWithUndoRedo {
 
     public static void main(String[] args) {
 
-        // Simulated user actions (at least 8 actions)
+        // Simulated user actions
         type("Hello");
         type(" World");
         undo();
