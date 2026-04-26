@@ -20,7 +20,7 @@ public class BrowserHistorySimulator {
         System.out.println("popped element:" + removed2);
 
         // Use peek() to view current page
-        System.out.println("\nCurrent page (peek): " + webPageURLs.peek());
+        System.out.println("Current page (peek): " + webPageURLs.peek());
 
         // Simulate pressing back button twice
         System.out.println("\nPressing back button...");
