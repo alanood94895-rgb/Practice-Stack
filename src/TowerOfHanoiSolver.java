@@ -43,6 +43,13 @@ public class TowerOfHanoiSolver {
         // smaller disk on larger
         return from.peek() < to.peek();
     }
+    // Move disk between pegs
+    public static void moveDisk(char fromPeg, char toPeg) {
+
+        if (!isValidMove(fromPeg, toPeg)) {
+            System.out.println("Invalid move attempted from " + fromPeg + " to " + toPeg);
+            return;
+        }
 
 }
 }
