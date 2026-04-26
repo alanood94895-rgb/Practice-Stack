@@ -73,7 +73,7 @@ public class TowerOfHanoiSolver {
         displayPegs();
     }
 
-    // ⭐ THIS WAS MISSING (MAIN LOGIC)
+    // MAIN LOGIC
     public static void solveHanoi(int n, char from, char to, char aux) {
 
         if (n == 1) {
