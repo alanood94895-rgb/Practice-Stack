@@ -69,7 +69,7 @@ public class BrowserNavigationSystem {
         display();
     }
 
-    // Go forward
+    // Use Go forward
     public static void goForward() {
 
         if (forwardStack.isEmpty()) {
