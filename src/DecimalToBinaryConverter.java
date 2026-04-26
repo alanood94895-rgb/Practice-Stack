@@ -26,7 +26,7 @@ public class DecimalToBinaryConverter {
         }
     }
 
-    // METHOD 1: Convert decimal to binary using stack
+    // METHOD 1
     public static String decimalToBinary(int decimal) {
 
         if (decimal == 0) return "0";
