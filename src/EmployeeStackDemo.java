@@ -14,7 +14,10 @@ public class EmployeeStackDemo {                     // Create the main class
         // Display all elements
         System.out.println(employeeAction);
 
+        // Add one more employee action
         employeeAction.push("employee Said change Passwords");
+
+
         System.out.println("Updated Employee Actions in Stack:");
         System.out.println(employeeAction);
     }
