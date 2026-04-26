@@ -71,7 +71,7 @@ public class HtmlTagValidator {
                     System.out.println("Matched: </" + tagName + ">");
                 }
 
-                // Opening tag
+                // OPENING TAG
                 else {
                     String tagName = tag.split(" ")[0];
                     openingTagsStack.push(tagName);
