@@ -13,16 +13,16 @@ public class StringReversalAndPalindrome {
         stack.push ('O');
 
         System.out.println(stack);
-             //test case for s4
-        System.out.println("Original String :"+s4);
-        System.out.println("Reverse String :"+reverseString(s4));
-        System.out.println(isPalindrome(s4));
+             //test case f
+        System.out.println("Original String :"+ stack);
+        System.out.println("Reverse String :"+reverseString(stack));
+        System.out.println(isPalindrome(stack));
         //Show stack process :
-        for (int i = 0; i<s1.length(); i++) {
-            stack.push(s1.charAt(i));
-            System.out.println("pushed "+s1.charAt(i)+" to stack");
+        for (int i = 0; i<stack.length(); i++) {
+            stack.push(stack.charAt(i));
+            System.out.println("pushed "+stack.charAt(i)+" to stack");
         }
-        for (int i = 0; i<s1.length(); i++) {
+        for (int i = 0; i<stack.length(); i++) {
             char popped = stack.pop();
             System.out.println("popped "+popped+" from stack");
         }
@@ -63,8 +63,8 @@ public class StringReversalAndPalindrome {
     }
 }
 
-        }
-    }
+
+
 
 
 
