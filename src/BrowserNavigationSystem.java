@@ -56,6 +56,13 @@ public class BrowserNavigationSystem {
                 System.out.println("Cannot go back");
                 return;
             }
+            forwardStack.push(currentPage);
+
+            currentPage = backStack.pop();
+
+            System.out.println("Went Back");
+            display();
+        }
     }
     }
 }
