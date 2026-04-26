@@ -61,7 +61,7 @@ public class TextEditorWithUndoRedo {
         display();
     }
 
-    // REDO method
+    // redo method
     public static void redo() {
 
         if (redoStack.isEmpty()) {
