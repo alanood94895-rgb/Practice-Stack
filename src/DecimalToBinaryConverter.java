@@ -52,7 +52,7 @@ public class DecimalToBinaryConverter {
         return binary;
     }
 
-    // METHOD 2: Show step-by-step process
+    // METHOD 2
     public static void displayConversionProcess(int decimal) {
 
         if (decimal < 0) {
