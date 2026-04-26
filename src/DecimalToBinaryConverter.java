@@ -15,6 +15,20 @@ public class DecimalToBinaryConverter {
         }
     }
     // METHOD 1
+    public static String decimalToBinary(int decimal) {
+
+        if (decimal == 0) return "0";
+
+        Stack<Integer> stack = new Stack<>();
+
+        int temp = decimal;
+
+        // Push remainders
+        while (temp > 0) {
+            int remainder = temp % 2;
+            stack.push(remainder);
+            temp = temp / 2;
+        }
 
     }
 
