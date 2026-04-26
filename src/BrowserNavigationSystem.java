@@ -53,7 +53,7 @@ public class BrowserNavigationSystem {
         display();
     }
 
-    // Go back
+    // Use Go back
     public static void goBack() {
 
         if (backStack.isEmpty()) {
