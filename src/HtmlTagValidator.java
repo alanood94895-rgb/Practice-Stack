@@ -19,7 +19,6 @@ public class HtmlTagValidator {
             System.out.println("HTML: " + html);
             boolean result = validateHtmlTags(html);
             System.out.println("Valid: " + result);
-            System.out.println("---------------------------");
         }
     }
 
@@ -92,6 +91,6 @@ public class HtmlTagValidator {
             return false;
         }
 
-        return true; // ✅ IMPORTANT FIX
+        return true;
     }
 }
