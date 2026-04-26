@@ -5,17 +5,17 @@ public class EmployeeStackDemo {                     // Create the main class
         // Create the Stack
         Stack <String> employeeAction = new Stack<>();
         // Add 5 employee action
-        employeeAction.push("employee Ali logged in");
-        employeeAction.push("employee Noof updated client records");
-        employeeAction.push("employee Noor generated report");
-        employeeAction.push("employee Hoor approved leave request");
-        employeeAction.push("employee Alanoud logged out");
+        employeeAction.push("A logged in");
+        employeeAction.push("B updated client records");
+        employeeAction.push("C generated report");
+        employeeAction.push("D approved leave request");
+        employeeAction.push("E logged out");
 
         // Display all elements
         System.out.println(employeeAction);
 
         // Add one more employee action
-        employeeAction.push("employee Said change Passwords");
+        employeeAction.push("R change Passwords");
 
 
         System.out.println("Updated Employee Actions in Stack:");
