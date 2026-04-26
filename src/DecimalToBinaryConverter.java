@@ -29,7 +29,68 @@ public class DecimalToBinaryConverter {
             stack.push(remainder);
             temp = temp / 2;
         }
+// Build binary string by popping
+        String binary = "";
 
+        while (!stack.isEmpty()) {
+            binary += stack.pop();
+        }
+
+        return binary;
+    }
+
+    // METHOD 2: Show step-by-step process
+    public static void displayConversionProcess(int decimal) {
+
+        if (decimal < 0) {
+            System.out.println("Negative number -> convert absolute value only");
+            decimal = Math.abs(decimal);
+        }
+
+        if (decimal == 0) {
+            System.out.println("0 ÷ 2 = 0 remainder 0");
+            return;
+        }
+
+        Stack<Integer> stack = new Stack<>();
+
+        int temp = decimal;
+
+        System.out.println("Step-by-step division:");
+
+        while (temp > 0) {
+
+            int quotient = temp / 2;
+            int remainder = temp % 2;
+
+            System.out.println(temp + " ÷ 2 = " + quotient + " remainder " + remainder);
+
+            stack.push(remainder);
+
+            System.out.println("Stack: " + stack);
+
+            temp = quotient;
+        }
+    }
+
+    // BONUS: Binary to Decimal conversion
+    public static int binaryToDecimal(String binary) {
+
+        int decimal = 0;
+        int power = 0;
+
+        for (int i = binary.length() - 1; i >= 0; i--) {
+
+            if (binary.charAt(i) == '1') {
+                decimal += Math.pow(2, power);
+            }
+
+            power++;
+        }
+
+        return decimal;
+    }
+}
     }
 
 }
