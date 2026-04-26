@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 public class PostfixEvaluator {
     public static void main (String[] args) {
 
@@ -9,7 +11,9 @@ public class PostfixEvaluator {
         String s5 = "2 9 /";
         String s6 = "7 8 + *";
 
+        // loop through expressions
         for (String expr : expressions) {
+
             System.out.println("Expression: " + expr);
 
             int result = evaluatePostfix(expr);
@@ -18,80 +22,86 @@ public class PostfixEvaluator {
 
         }
     }
-    String[] tokens = expression.split(" ");
+
+    // METHOD: evaluate postfix
+    public static int evaluatePostfix(String expression) {
+
+        Stack<Integer> stack = new Stack<>();
+
+        String[] tokens = expression.split(" ");
 
         for (String token : tokens) {
 
-        if (isNumber(token)) {
-            int num = Integer.parseInt(token);
-            stack.push(num);
+            // if number → push
+            if (isNumber(token)) {
 
-            System.out.println("Pushed: " + num + " | Stack: " + stack);
-        }
-    }
-        else {
+                int num = Integer.parseInt(token);
+                stack.push(num);
 
-        if (stack.size() < 2) {
-            System.out.println("Error: Not enough operands");
-            return 0;
-        }
+                System.out.println("Pushed: " + num + " | Stack: " + stack);
+            }
 
-        int b = stack.pop();
-        int a = stack.pop();
+            // if operator → calculate
+            else {
 
-        int result = 0;
-
-        switch (token) {
-
-            case "+":
-                result = a + b;
-                break;
-
-            case "-":
-                result = a - b;
-                break;
-
-            case "*":
-                result = a * b;
-                break;
-
-            case "/":
-                if (b == 0) {
-                    System.out.println("Error: Division by zero");
+                if (stack.size() < 2) {
+                    System.out.println("Error: Not enough operands");
                     return 0;
                 }
-                result = a / b;
-                break;
 
-            case "%":
-                result = a % b;
-                break;
+                int b = stack.pop();
+                int a = stack.pop();
 
-            default:
-                System.out.println("Invalid operator: " + token);
-                return 0;
+                int result = 0;
+
+                switch (token) {
+
+                    case "+":
+                        result = a + b;
+                        break;
+
+                    case "-":
+                        result = a - b;
+                        break;
+
+                    case "*":
+                        result = a * b;
+                        break;
+
+                    case "/":
+                        if (b == 0) {
+                            System.out.println("Error: Division by zero");
+                            return 0;
+                        }
+                        result = a / b;
+                        break;
+
+                    case "%":
+                        result = a % b;
+                        break;
+
+                    default:
+                        System.out.println("Invalid operator: " + token);
+                        return 0;
+                }
+
+                stack.push(result);
+
+                System.out.println("Applied " + token + " -> Stack: " + stack);
+            }
         }
 
-        stack.push(result);
-
-        System.out.println("Applied " + token + " -> Pushed result: " + result);
-        System.out.println("Stack: " + stack);
-    }
-}
-
-// Final result
         return stack.isEmpty() ? 0 : stack.pop();
     }
 
-// Helper method to check if token is a number
-public static boolean isNumber(String s) {
+    // helper method
+    public static boolean isNumber(String s) {
 
-    try {
-        Integer.parseInt(s);
-        return true;
-    } catch (Exception e) {
-        return false;
+        try {
+            Integer.parseInt(s);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 }
-}
-    }
