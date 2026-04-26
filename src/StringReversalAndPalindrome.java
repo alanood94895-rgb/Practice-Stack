@@ -5,24 +5,23 @@ public class StringReversalAndPalindrome {
         // Create the Stack
         Stack<Character> stack = new Stack<>();
 
-        stack.push ('j');
-        stack.push ('H');
-        stack.push ('B');
-        stack.push ('T');
-        stack.push ('W');
-        stack.push ('O');
-
-        System.out.println(stack);
-             //test case f
-        System.out.println("Original String :"+ stack);
-        System.out.println("Reverse String :"+reverseString(stack));
-        System.out.println(isPalindrome(stack));
+        //Create 6 String element
+        String s1="c";
+        String s2="n";
+        String s3="s";
+        String s4="h";
+        String s5="l";
+        String s6="j";
+        //test case for s4
+        System.out.println("Original String :"+s4);
+        System.out.println("Reverse String :"+reverseString(s4));
+        System.out.println(isPalindrome(s4));
         //Show stack process :
-        for (int i = 0; i<stack.length(); i++) {
-            stack.push(stack.charAt(i));
-            System.out.println("pushed "+stack.charAt(i)+" to stack");
+        for (int i = 0; i<s1.length(); i++) {
+            stack.push(s1.charAt(i));
+            System.out.println("pushed "+s1.charAt(i)+" to stack");
         }
-        for (int i = 0; i<stack.length(); i++) {
+        for (int i = 0; i<s1.length(); i++) {
             char popped = stack.pop();
             System.out.println("popped "+popped+" from stack");
         }
@@ -62,9 +61,3 @@ public class StringReversalAndPalindrome {
         return true;
     }
 }
-
-
-
-
-
-
