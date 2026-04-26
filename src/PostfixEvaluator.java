@@ -34,7 +34,7 @@ public class PostfixEvaluator {
 
         for (String token : tokens) {
 
-            // if number → push
+            // if
             if (isNumber(token)) {
 
                 int num = Integer.parseInt(token);
