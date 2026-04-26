@@ -16,7 +16,7 @@ public class BrowserNavigationSystem {
 
         showCurrentPage();
 
-        // Simulated user actions (12+ actions)
+        // Simulated user actions
         visitPage("Google");
         visitPage("YouTube");
         visitPage("Facebook");
