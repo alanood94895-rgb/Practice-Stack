@@ -13,6 +13,10 @@ public class ParenthesesValidator {
 
         System.out.println(ParenthesesValidator);
 
+        if(isBalanced){
+
+        }
+
 
 
 
