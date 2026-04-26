@@ -2,7 +2,7 @@ import java.util.Stack;
 
 public class TextEditorWithUndoRedo {
 
-    // Stack for undo actions
+    // Stack for undo Actions
     static Stack<String> undoStack = new Stack<>();
 
     // Stack for redo actions
