@@ -51,7 +51,7 @@ public class HtmlTagValidator {
                     System.out.println("Self closing tag: <" + tag + ">");
                 }
 
-                // Closing tag
+                // CLOSING TAG
                 else if (tag.startsWith("/")) {
 
                     String tagName = tag.substring(1).trim();
