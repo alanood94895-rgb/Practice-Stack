@@ -27,13 +27,12 @@ public class BrowserHistorySimulator {
         System.out.println("Is webPageURLs empty? " + webPageURLs.isEmpty());
 
         // Add 2 new pages
-        System.out.println("\nVisiting new pages...");
+        webPageURLs.push("Twitter.com");
+        webPageURLs.push("Facebook.com");
 
-        webPageURLs.push("twitter.com");
-        display(webPageURLs);
+         // Display the final webPageURLs
+        System.out.println(webPageURLs);
 
-        webPageURLs.push("facebook.com");
-        display(webPageURLs);
 
         // Final history
         System.out.println("\nFinal browsing history:");
