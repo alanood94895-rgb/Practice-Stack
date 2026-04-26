@@ -18,7 +18,21 @@ public class BrowserNavigationSystem {
             showCurrentPage();
 
             // Simulated user actions
+            visitPage("Google");
+            visitPage("YouTube");
+            visitPage("Facebook");
+            goBack();
+            goBack();
+            goForward();
+            visitPage("Twitter");
+            goBack();
+            visitPage("LinkedIn");
+            goBack();
+            goForward();
+            goForward(); // edge case
 
+            showSessionHistory();
+        }
 
         }
     }
