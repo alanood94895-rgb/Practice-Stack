@@ -35,7 +35,8 @@ public class BrowserNavigationSystem {
         }
         // Visit new page
         public static void visitPage(String url) {
-
+// Save current page to back stack
+            backStack.push(currentPage);
 
     }
     }
