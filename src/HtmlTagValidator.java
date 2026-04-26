@@ -43,7 +43,7 @@ public class HtmlTagValidator {
 
                 int j = i + 1;
 
-                // find closing '>'
+                // find closing
                 while (j < html.length() && html.charAt(j) != '>') {
                     j++;
                 }
