@@ -95,7 +95,6 @@ public class BrowserNavigationSystem {
         System.out.println("Current Page: " + currentPage);
         System.out.println("Back Stack: " + backStack);
         System.out.println("Forward Stack: " + forwardStack);
-        System.out.println("----------------------");
     }
 
     // Bonus: show all pages visited in session
