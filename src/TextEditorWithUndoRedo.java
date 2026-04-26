@@ -7,6 +7,9 @@ public class TextEditorWithUndoRedo {
 
         Stack<String> redoStack = new Stack<>();  //  Stack for redo actions
 
+        // Current text
+        Stack StringBuilder; StringBuilder text = new StringBuilder();
+
 
     }
 }
