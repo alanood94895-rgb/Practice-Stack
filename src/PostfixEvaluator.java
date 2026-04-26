@@ -43,7 +43,6 @@ public class PostfixEvaluator {
                 System.out.println("Pushed: " + num + " | Stack: " + stack);
             }
 
-            // if operator → calculate
             else {
 
                 if (stack.size() < 2) {
