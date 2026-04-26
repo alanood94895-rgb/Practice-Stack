@@ -7,6 +7,7 @@ public class TowerOfHanoiSolver {
         // Three stacks representing pegs A, B, C
         static Stack<Integer> pegA = new Stack<>();
         static Stack<Integer> pegB = new Stack<>();
+        static Stack<Integer> pegC = new Stack<>();
 
     }
 }
