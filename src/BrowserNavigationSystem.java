@@ -11,5 +11,7 @@ public class BrowserNavigationSystem {
     // Current page
     static String currentPage = "Home";
 
+    // Limit for back history
+
 
 }
