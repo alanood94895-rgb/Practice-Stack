@@ -9,6 +9,8 @@ public class EmployeeStackSearch {
         employeeAction.push("C generated report");
         employeeAction.push("D approved leave request");
         employeeAction.push("E logged out");
+        employeeAction.push("Z change Passwords");
+
 
     }
 }
