@@ -5,12 +5,12 @@ public class PostfixEvaluator {
 
         //Create 6 String element
         String[] expressions = {
-                "1 2 +",
-                "3 4 -",
+                "7 2 +",
+                "3 9 -",
                 "5 7 *",
-                "10 1 %",
-                "2 9 /",
-                "7 8 +"
+                "12 1 %",
+                "2 10 /",
+                "2 8 +"
         };
 
         // loop through expressions
@@ -25,7 +25,7 @@ public class PostfixEvaluator {
         }
     }
 
-    // METHOD: evaluate postfix
+    //  evaluate postfix
     public static int evaluatePostfix(String expression) {
 
         Stack<Integer> stack = new Stack<>();
