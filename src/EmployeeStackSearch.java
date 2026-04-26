@@ -11,6 +11,11 @@ public class EmployeeStackSearch {
         employeeAction.push("E logged out");
         employeeAction.push("Z change Passwords");
 
+        // Display all elements
+        System.out.println(employeeAction);
+
+        int position = Stack.search ()
+
 
     }
 }
