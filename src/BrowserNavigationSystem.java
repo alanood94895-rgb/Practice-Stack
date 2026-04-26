@@ -64,5 +64,20 @@ public class BrowserNavigationSystem {
             display();
         }
     }
+    // Go forward
+    public static void goForward() {
+
+        if (forwardStack.isEmpty()) {
+            System.out.println("Cannot go forward");
+            return;
+        }
+
+        backStack.push(currentPage);
+
+        currentPage = forwardStack.pop();
+
+        System.out.println("Went Forward");
+        display();
+    }
     }
 }
