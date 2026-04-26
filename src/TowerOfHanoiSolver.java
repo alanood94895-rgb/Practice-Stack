@@ -30,6 +30,18 @@ public class TowerOfHanoiSolver {
         if (peg == 'A') return pegA;
         if (peg == 'B') return pegB;
         return pegC;
+    }
+    // Check if move is valid
+    public static boolean isValidMove(char fromPeg, char toPeg) {
+        Stack<Integer> from = getPeg(fromPeg);
+        Stack<Integer> to = getPeg(toPeg);
+
+        if (from.isEmpty()) return false;
+
+        if (to.isEmpty()) return true;
+
+        return from.peek() < to.peek(); // smaller disk on larger
+    }
 
 }
 }
