@@ -58,9 +58,8 @@ public class TowerOfHanoiSolver {
 
         moveCount++;
         System.out.println("Peg A: " + pegA);
-
-
-
+        System.out.println("Peg B: " + pegB);
+        System.out.println("Peg C: " + pegC);
 
     }
 }
