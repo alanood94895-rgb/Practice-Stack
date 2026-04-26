@@ -23,7 +23,6 @@ public class DecimalToBinaryConverter {
 
             System.out.println("Binary (Built-in): " + Integer.toBinaryString(decimal));
 
-            System.out.println("-----------------------------------");
         }
     }
 
