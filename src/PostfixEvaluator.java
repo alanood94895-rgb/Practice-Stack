@@ -10,6 +10,11 @@ public class PostfixEvaluator {
         String s6="7 8 + *";
 
         for (String expr : expressions) {
+            System.out.println("Expression: " + expr);
+
+            int result = evaluatePostfix(expr);
+
+            System.out.println("Result: " + result);
 
         }
 
