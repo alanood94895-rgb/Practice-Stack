@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-public class EmployeeStackDemo {
+public class EmployeeStackDemo {                     // Create the main class
     public static void main (String[] args){
         Stack <String> employeeAction = new Stack<>();
         employeeAction.push("A logged in");
