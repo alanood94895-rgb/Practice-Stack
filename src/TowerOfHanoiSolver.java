@@ -86,7 +86,7 @@ public class TowerOfHanoiSolver {
         solveHanoi(n - 1, aux, to, from);
     }
 
-    // ⭐ CLEAN DISPLAY METHOD
+    // CLEAN DISPLAY METHOD
     public static void displayPegs() {
         System.out.println("A: " + pegA);
         System.out.println("B: " + pegB);
