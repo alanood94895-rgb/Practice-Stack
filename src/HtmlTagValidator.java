@@ -13,7 +13,7 @@ public class HtmlTagValidator {
                 "<p><i>Text</p></i>",
                 "<br/>",
                 "",
-                "<div class='box'><p>Test</p></div>"
+                "<div class='box'><p>Test</p></div>",
         };
 
         for (String html : tests) {
@@ -22,7 +22,6 @@ public class HtmlTagValidator {
             boolean result = validateHtmlTags(html);
 
             System.out.println("Valid: " + result);
-            System.out.println("------------------------------");
         }
     }
 
