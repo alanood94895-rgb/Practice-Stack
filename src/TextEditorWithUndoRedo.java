@@ -43,7 +43,7 @@ public class TextEditorWithUndoRedo {
         display();
     }
 
-    // UNDO method
+    // Undo method
     public static void undo() {
 
         if (undoStack.isEmpty()) {
