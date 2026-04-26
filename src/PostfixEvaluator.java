@@ -21,4 +21,12 @@ public class PostfixEvaluator {
     String[] tokens = expression.split(" ");
 
         for (String token : tokens) {
+
+        if (isNumber(token)) {
+            int num = Integer.parseInt(token);
+            stack.push(num);
+
+            System.out.println("Pushed: " + num + " | Stack: " + stack);
+        }
+    }
     }
