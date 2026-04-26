@@ -35,7 +35,7 @@ public class DecimalToBinaryConverter {
 
         int temp = decimal;
 
-        // Push remainders
+        // Push remainder
         while (temp > 0) {
             int remainder = temp % 2;
             stack.push(remainder);
