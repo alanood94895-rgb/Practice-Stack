@@ -9,6 +9,11 @@ public class EmployeeStackDemo {
         employeeAction.push("D approved leave request");
         employeeAction.push("E logged out");
 
+        System.out.println(employeeAction);
 
+        employeeAction.push("z change Passwords");
+        System.out.println("Updated Employee Actions in Stack:");
+        System.out.println(employeeAction);
     }
+
 }
