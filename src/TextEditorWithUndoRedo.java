@@ -79,12 +79,11 @@ public class TextEditorWithUndoRedo {
         display();
     }
 
-    // DISPLAY method
+    // display method
     public static void display() {
 
         System.out.println("Current Text: " + text);
         System.out.println("Undo Stack: " + undoStack);
         System.out.println("Redo Stack: " + redoStack);
-        System.out.println("---------------------------");
     }
 }
