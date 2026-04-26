@@ -88,7 +88,6 @@ public class BrowserNavigationSystem {
     // Show current page
     public static void showCurrentPage() {
         System.out.println("Current Page: " + currentPage);
-        System.out.println("----------------------");
     }
 
     // Display stacks + current page
