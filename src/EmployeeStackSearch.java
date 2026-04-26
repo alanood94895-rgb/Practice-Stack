@@ -1,9 +1,12 @@
 import java.util.Stack;
 
 public class EmployeeStackSearch {
-    public static void main (String[] args){
-        Stack <String> employeeAction = new Stack<>();
+    public static void main(String[] args) {
 
+        // Create Stack
+        Stack<String> employeeAction = new Stack<>();
+
+        // Add elements
         employeeAction.push("A logged in");
         employeeAction.push("B updated client records");
         employeeAction.push("C generated report");
@@ -12,18 +15,24 @@ public class EmployeeStackSearch {
         employeeAction.push("Z change Passwords");
 
         // Display all elements
-        System.out.println(employeeAction);
+        System.out.println("Stack: " + employeeAction);
 
-        int position = Stack.search ("Find position 2");
-        if (position != -1){
+        // Use search()
+        int position = employeeAction.search("B updated client records");
+        if (position != -1) {
             System.out.println("Position of 'B updated client records': " + position);
+        } else {
+            System.out.println("Element not found");
         }
-        System.out.println("contains 'B updated client records':" + Sentance.contain ("B updated client records"));
 
-        System.out.println(("stack element:" ));
-        for (Integer nums :stack) {
-            System.out.println(nums);
+        // Use contains() correctly
+        System.out.println("Contains 'B updated client records': "
+                + employeeAction.contains("B updated client records"));
+
+        // Iterate using for-each loop (bottom to top)
+        System.out.println("Stack elements:");
+        for (String action : employeeAction) {
+            System.out.println(action);
         }
     }
-
 }
