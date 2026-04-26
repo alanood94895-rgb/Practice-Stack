@@ -22,17 +22,9 @@ public class BrowserHistorySimulator {
         // Use peek() to view current page
         System.out.println("Current page (peek): " + webPageURLs.peek());
 
-        // Simulate pressing back button twice
-        System.out.println("\nPressing back button...");
-
-        webPageURLs.pop();
-        System.out.println("After 1st back, current page: " + webPageURLs.peek());
-
-        webPageURLs.pop();
-        System.out.println("After 2nd back, current page: " + webPageURLs.peek());
 
         // Check if stack is empty
-        System.out.println("\nIs history empty? " + webPageURLs.isEmpty());
+        System.out.println("Is webPageURLs empty? " + webPageURLs.isEmpty());
 
         // Add 2 new pages
         System.out.println("\nVisiting new pages...");
