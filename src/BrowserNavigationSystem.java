@@ -28,7 +28,7 @@ public class BrowserNavigationSystem {
         visitPage("LinkedIn");
         goBack();
         goForward();
-        goForward(); // edge case
+        goForward();
 
         showSessionHistory();
     }
