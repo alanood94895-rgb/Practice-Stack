@@ -12,7 +12,7 @@ public class HtmlTagValidator {
                 "<br/>",
                 "",
                 "<div class='box'><p>Hi</p></div>",
-                "<div><p>"
+                "<div><p>",
         };
 
         for (String html : tests) {
@@ -27,7 +27,7 @@ public class HtmlTagValidator {
         Stack<String> openingTagsStack = new Stack<>();
 
         if (html == null || html.isEmpty()) {
-            System.out.println("Empty string → Valid");
+            System.out.println("Empty string Valid");
             return true;
         }
 
@@ -46,7 +46,7 @@ public class HtmlTagValidator {
 
                 String tag = html.substring(i + 1, closeIndex).trim();
 
-                // Self-closing
+                // SELF CLOSING
                 if (tag.endsWith("/")) {
                     System.out.println("Self-closing tag: <" + tag + ">");
                 }
