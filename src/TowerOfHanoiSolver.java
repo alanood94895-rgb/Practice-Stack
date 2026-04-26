@@ -12,5 +12,12 @@ public class TowerOfHanoiSolver {
     // Counter for moves
     static int moveCount = 0;
 
+    // Initialize peg A with disks
+    public static void initializePegs(int numDisks) {
+        pegA.clear();
+        pegB.clear();
+        pegC.clear();
+        moveCount = 0;
+
 }
 }
