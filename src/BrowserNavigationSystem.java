@@ -41,6 +41,14 @@ public class BrowserNavigationSystem {
             if (backStack.size() > MAX_HISTORY) {
                 backStack.remove(0); // remove oldest
             }
+            currentPage = url;
+
+            // Clear forward history
+            forwardStack.clear();
+
+            System.out.println("Visited: " + url);
+            display();
+        }
     }
     }
 }
