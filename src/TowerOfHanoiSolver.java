@@ -39,9 +39,11 @@ public class TowerOfHanoiSolver {
     }
 
     public static Stack<Integer> getPeg(char peg) {
-        if (peg == 'A') return pegA;
-        if (peg == 'B') return pegB;
-        return pegC;
+        if (peg == 'A')
+            return pegA;
+        if (peg == 'B')
+            return pegB;
+            return pegC;
     }
 
     public static boolean isValidMove(char fromPeg, char toPeg) {
