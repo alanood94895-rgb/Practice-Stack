@@ -8,5 +8,9 @@ public class PostfixEvaluator {
         String s4="10 1 %";
         String s5="2 9 /";
         String s6="7 8 + *";
+
+        for (String expr : expressions) {
+
+        }
+
     }
-}
