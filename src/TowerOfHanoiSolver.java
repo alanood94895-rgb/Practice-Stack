@@ -58,7 +58,7 @@ public class TowerOfHanoiSolver {
 
     public static void moveDisk(char fromPeg, char toPeg) {
 
-        if (!isValidMove(fromPeg, toPeg)) {
+        if (isValidMove(fromPeg, toPeg)) {
             System.out.println("Invalid move from " + fromPeg + " to " + toPeg);
             return;
         }
