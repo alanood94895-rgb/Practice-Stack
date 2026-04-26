@@ -1,4 +1,7 @@
+import java.util.Stack;
+
 public class HtmlTagValidator {
+
     public static void main(String[] args) {
 
         // 8 test HTML/XML strings
@@ -12,12 +15,14 @@ public class HtmlTagValidator {
                 "",
                 "<div class='box'><p>Test</p></div>"
         };
+
         for (String html : tests) {
             System.out.println("HTML: " + html);
 
             boolean result = validateHtmlTags(html);
 
             System.out.println("Valid: " + result);
+            System.out.println("------------------------------");
         }
     }
 
@@ -103,4 +108,3 @@ public class HtmlTagValidator {
         }
     }
 }
-    }
