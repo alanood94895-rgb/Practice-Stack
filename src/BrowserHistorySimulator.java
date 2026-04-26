@@ -13,5 +13,23 @@ public class BrowserHistorySimulator {
 
         System.out.println(webPageURLs);
 
+        // Use pop()
+        String removed = webPageURLs.pop();
+        String removed2 = webPageURLs.pop();
+        System.out.println("popped element:" + removed);
+        System.out.println("popped element:" + removed2);
+
+        // Use peek() to view current page
+        System.out.println("Current page (peek): " + webPageURLs.peek());
+
+        // Check if webPageURLs is empty
+        System.out.println("Is webPageURLs empty? " + webPageURLs.isEmpty());
+
+        // Add 2 new page
+        webPageURLs.push("Twitter.com");
+        webPageURLs.push("Facebook.com");
+        //  Display the final webPageURLs
+        System.out.println(webPageURLs);
+
     }
 }
