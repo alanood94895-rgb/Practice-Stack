@@ -49,6 +49,13 @@ public class BrowserNavigationSystem {
             System.out.println("Visited: " + url);
             display();
         }
+        // Go back
+        public static void goBack() {
+
+            if (backStack.isEmpty()) {
+                System.out.println("Cannot go back");
+                return;
+            }
     }
     }
 }
