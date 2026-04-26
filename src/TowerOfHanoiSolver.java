@@ -56,6 +56,8 @@ public class TowerOfHanoiSolver {
         int disk = from.pop();
         to.push(disk);
 
+        moveCount++;
+
 
 
     }
