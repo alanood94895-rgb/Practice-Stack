@@ -25,7 +25,7 @@ public class HtmlTagValidator {
         }
     }
 
-    // METHOD: Validate HTML tags using Stack
+    // Method Validate HTML tags using Stack
     public static boolean validateHtmlTags(String html) {
 
         Stack<String> stack = new Stack<>();
