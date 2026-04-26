@@ -4,7 +4,7 @@ public class HtmlTagValidator {
 
     public static void main(String[] args) {
 
-        // 8 test HTML/XML strings
+        // 8 test
         String[] tests = {
                 "<html><body><p>Hello</p></body></html>",
                 "<div><b>Bold</b></div>",
