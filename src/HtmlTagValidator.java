@@ -4,34 +4,31 @@ public class HtmlTagValidator {
 
     public static void main(String[] args) {
 
-        // 8 test
         String[] tests = {
-                "<html><body><p>Hello</p></body></html>",
+                "<html><body><p>Test</p></body></html>",
                 "<div><b>Bold</b></div>",
                 "<div><b>Wrong</i></div>",
-                "<html><head></head><body><h1>Title</h1></body></html>",
                 "<p><i>Text</p></i>",
                 "<br/>",
                 "",
-                "<div class='box'><p>Test</p></div>",
+                "<div class='box'><p>Hi</p></div>",
+                "<div><p>"
         };
 
         for (String html : tests) {
             System.out.println("HTML: " + html);
-
             boolean result = validateHtmlTags(html);
-
             System.out.println("Valid: " + result);
+            System.out.println("---------------------------");
         }
     }
 
-    // Method Validate HTML tags using Stack
     public static boolean validateHtmlTags(String html) {
 
-        Stack<String> stack = new Stack<>();
+        Stack<String> openingTagsStack = new Stack<>();
 
-        if (html == null || html.trim().isEmpty()) {
-            System.out.println("Empty HTML string");
+        if (html == null || html.isEmpty()) {
+            System.out.println("Empty string → Valid");
             return true;
         }
 
@@ -41,69 +38,60 @@ public class HtmlTagValidator {
 
             if (html.charAt(i) == '<') {
 
-                int j = i + 1;
+                int closeIndex = html.indexOf('>', i);
 
-                // find closing
-                while (j < html.length() && html.charAt(j) != '>') {
-                    j++;
-                }
-
-                if (j == html.length()) {
-                    System.out.println("Error: Missing '>'");
+                if (closeIndex == -1) {
+                    System.out.println("Error: Tag not closed properly.");
                     return false;
                 }
 
-                String tag = html.substring(i + 1, j);
+                String tag = html.substring(i + 1, closeIndex).trim();
 
-                System.out.println("Found tag: <" + tag + ">");
-
-                // SELF-CLOSING TAG
+                // Self-closing
                 if (tag.endsWith("/")) {
-                    System.out.println("Self-closing tag ignored");
+                    System.out.println("Self-closing tag: <" + tag + ">");
                 }
 
-                // CLOSING TAG
+                // Closing tag
                 else if (tag.startsWith("/")) {
 
-                    String tagName = tag.substring(1);
+                    String tagName = tag.substring(1).trim();
 
-                    if (stack.isEmpty()) {
+                    if (openingTagsStack.isEmpty()) {
                         System.out.println("Error: No opening tag for </" + tagName + ">");
                         return false;
                     }
 
-                    String top = stack.pop();
-
-                    System.out.println("Popped: " + top);
+                    String top = openingTagsStack.pop();
 
                     if (!top.equals(tagName)) {
-                        System.out.println("Error: Mismatch <" + top + "> and </" + tagName + ">");
+                        System.out.println("Error: Expected </" + top + "> but found </" + tagName + ">");
                         return false;
                     }
+
+                    System.out.println("Matched: </" + tagName + ">");
                 }
 
-                // OPENING TAG (may contain attributes)
+                // Opening tag
                 else {
-                    String tagName = tag.split(" ")[0]; // remove attributes
-                    stack.push(tagName);
-                    System.out.println("Pushed: " + tagName);
+                    String tagName = tag.split(" ")[0];
+                    openingTagsStack.push(tagName);
+                    System.out.println("Pushed: <" + tagName + ">");
                 }
 
-                System.out.println("Stack: " + stack);
+                System.out.println("Stack: " + openingTagsStack);
 
-                i = j;
+                i = closeIndex;
             }
 
             i++;
         }
 
-        // Final check
-        if (stack.isEmpty()) {
-            System.out.println("All tags matched correctly");
-            return true;
-        } else {
-            System.out.println("Error: Unclosed tags remain: " + stack);
+        if (!openingTagsStack.isEmpty()) {
+            System.out.println("Error: Unclosed tags → " + openingTagsStack);
             return false;
         }
+
+        return true; // ✅ IMPORTANT FIX
     }
 }
