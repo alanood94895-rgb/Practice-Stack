@@ -14,7 +14,10 @@ public class EmployeeStackSearch {
         // Display all elements
         System.out.println(employeeAction);
 
-        int position = Stack.search ()
+        int position = Stack.search ("Find position 2");
+        if (position != -1){
+
+        }
 
 
     }
