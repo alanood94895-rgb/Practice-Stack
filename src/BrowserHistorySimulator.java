@@ -20,16 +20,42 @@ public class BrowserHistorySimulator {
         System.out.println("popped element:" + removed2);
 
         // Use peek() to view current page
-        System.out.println("Current page (peek): " + webPageURLs.peek());
+        System.out.println("\nCurrent page (peek): " + webPageURLs.peek());
 
-        // Check if webPageURLs is empty
-        System.out.println("Is webPageURLs empty? " + webPageURLs.isEmpty());
+        // Simulate pressing back button twice
+        System.out.println("\nPressing back button...");
 
-        // Add 2 new page
-        webPageURLs.push("Twitter.com");
-        webPageURLs.push("Facebook.com");
-        //  Display the final webPageURLs
+        webPageURLs.pop();
+        System.out.println("After 1st back, current page: " + webPageURLs.peek());
+
+        webPageURLs.pop();
+        System.out.println("After 2nd back, current page: " + webPageURLs.peek());
+
+        // Check if stack is empty
+        System.out.println("\nIs history empty? " + webPageURLs.isEmpty());
+
+        // Add 2 new pages
+        System.out.println("\nVisiting new pages...");
+
+        webPageURLs.push("twitter.com");
+        display(webPageURLs);
+
+        webPageURLs.push("facebook.com");
+        display(webPageURLs);
+
+        // Final history
+        System.out.println("\nFinal browsing history:");
         System.out.println(webPageURLs);
 
+        // Bonus: clear history
+        webPageURLs.clear();
+        System.out.println("\nHistory cleared. Is empty? " + webPageURLs.isEmpty());
+    }
+
+    // Method to display current page and full history
+    public static void display(Stack<String> stack) {
+        System.out.println("Current page: " + stack.peek());
+        System.out.println("History: " + stack);
+        System.out.println("----------------------");
     }
 }
