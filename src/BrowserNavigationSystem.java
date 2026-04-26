@@ -37,7 +37,10 @@ public class BrowserNavigationSystem {
         public static void visitPage(String url) {
 // Save current page to back stack
             backStack.push(currentPage);
-
+            // Maintain max history
+            if (backStack.size() > MAX_HISTORY) {
+                backStack.remove(0); // remove oldest
+            }
     }
     }
 }
