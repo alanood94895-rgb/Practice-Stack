@@ -6,11 +6,12 @@ public class StringReversalAndPalindrome {
         Stack<String> String = new Stack<>();
 
         String.push("Java");
-        String.push("");
-        String.push("");
-        String.push("");
-        String.push("");
-        String.push("");
+        String.push("Hi");
+        String.push("Hello");
+        String.push("Wlcome");
+        String.push("c");
+        String.push("Amazone");
 
+        System.out.println(String);
     }
 }
