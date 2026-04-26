@@ -34,6 +34,7 @@ public class BrowserNavigationSystem {
             showSessionHistory();
         }
         // Visit new page
+        public static void visitPage(String url) {
 
 
     }
