@@ -54,6 +54,8 @@ public class TowerOfHanoiSolver {
         Stack<Integer> to = getPeg(toPeg);
 
         int disk = from.pop();
+        to.push(disk);
+
 
 
     }
