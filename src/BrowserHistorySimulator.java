@@ -33,20 +33,5 @@ public class BrowserHistorySimulator {
          // Display the final webPageURLs
         System.out.println(webPageURLs);
 
-
-        // Final webPageURLs
-        System.out.println("Final browsing webPageURLs:");
-        System.out.println(webPageURLs);
-
-        // Bonus: clear history
-        webPageURLs.clear();
-        System.out.println("\nHistory cleared. Is empty? " + webPageURLs.isEmpty());
-    }
-
-    // Method to display current page and full history
-    public static void display(Stack<String> stack) {
-        System.out.println("Current page: " + stack.peek());
-        System.out.println("History: " + stack);
-        System.out.println("----------------------");
     }
 }
