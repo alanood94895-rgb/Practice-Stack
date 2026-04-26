@@ -18,7 +18,6 @@ public class HtmlTagValidator {
             boolean result = validateHtmlTags(html);
 
             System.out.println("Valid: " + result);
-            System.out.println("------------------------------");
         }
     }
 
