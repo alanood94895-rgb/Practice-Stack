@@ -8,5 +8,7 @@ public class BrowserNavigationSystem {
     static Stack<String> backStack = new Stack<>();
     static Stack<String> forwardStack = new Stack<>();
 
+    // Current page
+
 
 }
