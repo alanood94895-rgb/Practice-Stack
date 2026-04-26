@@ -16,9 +16,14 @@ public class EmployeeStackSearch {
 
         int position = Stack.search ("Find position 2");
         if (position != -1){
-
+            System.out.println("Position of 'B updated client records': " + position);
         }
+        System.out.println("contains 'B updated client records':" + Sentance.contain ("B updated client records"));
 
-
+        System.out.println(("stack element:" ));
+        for (Integer nums :stack) {
+            System.out.println(nums);
+        }
     }
+
 }
