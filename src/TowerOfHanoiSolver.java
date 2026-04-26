@@ -40,7 +40,8 @@ public class TowerOfHanoiSolver {
 
         if (to.isEmpty()) return true;
 
-        return from.peek() < to.peek(); // smaller disk on larger
+        // smaller disk on larger
+        return from.peek() < to.peek();
     }
 
 }
