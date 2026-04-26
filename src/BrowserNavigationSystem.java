@@ -17,6 +17,9 @@ public class BrowserNavigationSystem {
         public static void main (String[]args){
             showCurrentPage();
 
+            // Simulated user actions
+
+
         }
     }
 }
