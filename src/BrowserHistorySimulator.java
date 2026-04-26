@@ -34,8 +34,8 @@ public class BrowserHistorySimulator {
         System.out.println(webPageURLs);
 
 
-        // Final history
-        System.out.println("\nFinal browsing history:");
+        // Final webPageURLs
+        System.out.println("Final browsing webPageURLs:");
         System.out.println(webPageURLs);
 
         // Bonus: clear history
