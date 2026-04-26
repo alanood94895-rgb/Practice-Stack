@@ -9,7 +9,9 @@ public class ParenthesesValidator {
         ParenthesesValidator.push(")))");
         ParenthesesValidator.push("[[[]]]");
         ParenthesesValidator.push("]]]");
-        ParenthesesValidator.push("(((");
+        ParenthesesValidator.push("{{{");
+
+        System.out.println(ParenthesesValidator);
 
 
 
