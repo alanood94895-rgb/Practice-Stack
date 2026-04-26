@@ -29,4 +29,69 @@ public class PostfixEvaluator {
             System.out.println("Pushed: " + num + " | Stack: " + stack);
         }
     }
+        else {
+
+        if (stack.size() < 2) {
+            System.out.println("Error: Not enough operands");
+            return 0;
+        }
+
+        int b = stack.pop();
+        int a = stack.pop();
+
+        int result = 0;
+
+        switch (token) {
+
+            case "+":
+                result = a + b;
+                break;
+
+            case "-":
+                result = a - b;
+                break;
+
+            case "*":
+                result = a * b;
+                break;
+
+            case "/":
+                if (b == 0) {
+                    System.out.println("Error: Division by zero");
+                    return 0;
+                }
+                result = a / b;
+                break;
+
+            case "%":
+                result = a % b;
+                break;
+
+            default:
+                System.out.println("Invalid operator: " + token);
+                return 0;
+        }
+
+        stack.push(result);
+
+        System.out.println("Applied " + token + " -> Pushed result: " + result);
+        System.out.println("Stack: " + stack);
+    }
+}
+
+// Final result
+        return stack.isEmpty() ? 0 : stack.pop();
+    }
+
+// Helper method to check if token is a number
+public static boolean isNumber(String s) {
+
+    try {
+        Integer.parseInt(s);
+        return true;
+    } catch (Exception e) {
+        return false;
+    }
+}
+}
     }
