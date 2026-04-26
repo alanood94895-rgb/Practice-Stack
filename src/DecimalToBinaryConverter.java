@@ -7,6 +7,7 @@ public class DecimalToBinaryConverter {
 
         for (int i = 0; i < numbers.length; i++) {
             int decimal = numbers[i];
+            System.out.println("Decimal: " + decimal);
 
 
     }
