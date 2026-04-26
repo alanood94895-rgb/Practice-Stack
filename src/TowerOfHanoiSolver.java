@@ -53,6 +53,8 @@ public class TowerOfHanoiSolver {
         Stack<Integer> from = getPeg(fromPeg);
         Stack<Integer> to = getPeg(toPeg);
 
+        int disk = from.pop();
+
 
     }
 }
