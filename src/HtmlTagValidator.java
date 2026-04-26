@@ -48,7 +48,7 @@ public class HtmlTagValidator {
 
                 // SELF CLOSING
                 if (tag.endsWith("/")) {
-                    System.out.println("Self-closing tag: <" + tag + ">");
+                    System.out.println("Self closing tag: <" + tag + ">");
                 }
 
                 // Closing tag
