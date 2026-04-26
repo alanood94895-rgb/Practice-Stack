@@ -9,6 +9,7 @@ public class BrowserNavigationSystem {
     static Stack<String> forwardStack = new Stack<>();
 
     // Current page
+    static String currentPage = "Home";
 
 
 }
