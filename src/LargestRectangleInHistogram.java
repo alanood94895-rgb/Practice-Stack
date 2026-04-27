@@ -130,7 +130,7 @@ public class LargestRectangleInHistogram {
         System.out.println();
     }
 
-    // 🔹 DISPLAY RESULT
+    // DISPLAY RESULT
     public static void displayResult(int[] heights, int maxArea) {
         System.out.println("\nMax Rectangle Area: " + maxArea);
     }
