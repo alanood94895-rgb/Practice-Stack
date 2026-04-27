@@ -26,7 +26,7 @@ public class LargestRectangleInHistogram {
         compareApproaches();
     }
 
-    // MAIN ALGORITHM (O(n))
+    // MAIN ALGORITHM
     public static int findLargestRectangle(int[] heights) {
 
         if (heights.length == 0) {
