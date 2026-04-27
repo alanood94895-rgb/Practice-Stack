@@ -123,7 +123,7 @@ public class NextGreaterElementFinder {
         }
     }
 
-    // 🔹 COMPARISON
+    // COMPARISON
     public static void compareApproaches() {
 
         System.out.println("\n==============================");
