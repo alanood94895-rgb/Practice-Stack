@@ -111,3 +111,5 @@ public static void displayResults(int[] arr, int[] result) {
         System.out.println(i + "\t" + arr[i] + "\t" + result[i]);
     }
 }
+// 🔹 COMPARISON
+public static void compareApproaches() {
