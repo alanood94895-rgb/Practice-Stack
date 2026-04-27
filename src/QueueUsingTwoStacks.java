@@ -74,4 +74,12 @@ public class QueueUsingTwoStacks {
                 return inputStack.size() + outputStack.size();
             }
         }
+        // 🔹 TRANSFER ELEMENTS (core logic)
+        private void transfer() {
+            System.out.println("Transferring elements from inputStack → outputStack");
+
+            while (!inputStack.isEmpty()) {
+                outputStack.push(inputStack.pop());
+            }
+        }
 }
