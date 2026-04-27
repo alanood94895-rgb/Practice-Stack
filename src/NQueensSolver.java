@@ -216,7 +216,7 @@ public class NQueensSolver {
 
                 count += solveHelper(row + 1, n, queens);
 
-                queens.pop(); // backtrack
+                queens.pop(); //
             }
         }
 
