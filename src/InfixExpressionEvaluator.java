@@ -147,7 +147,6 @@ public class InfixExpressionEvaluator {
         return 0;
     }
 
-    // 🔹 PRECEDENCE
     public static int getPrecedence(char op) {
         if (op == '^') return 3;
         if (op == '*' || op == '/' || op == '%') return 2;
@@ -155,22 +154,18 @@ public class InfixExpressionEvaluator {
         return 0;
     }
 
-    // 🔹 CHECK OPERATOR
     public static boolean isOperator(char ch) {
         return ch == '+' || ch == '-' || ch == '*' ||
                 ch == '/' || ch == '%' || ch == '^';
     }
 
-    // 🔹 CHECK NUMBER
     public static boolean isNumber(char ch) {
         return Character.isDigit(ch) || ch == '.';
     }
 
-    // 🔹 DISPLAY STACKS
     public static void displayStacks(Stack<Double> operands, Stack<Character> operators) {
 
         System.out.println("Operands:  " + operands);
         System.out.println("Operators: " + operators);
-        System.out.println("-------------------------");
     }
 }
