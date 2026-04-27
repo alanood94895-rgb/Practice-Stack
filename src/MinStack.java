@@ -55,7 +55,7 @@ public class MinStack {
     public void pop() {
 
         if (mainStack.isEmpty()) {
-            System.out.println("\nPop: Stack is empty");
+            System.out.println("Pop: Stack is empty");
             return;
         }
 
