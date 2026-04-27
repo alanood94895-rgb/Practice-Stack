@@ -69,7 +69,7 @@ public class MinStack {
         display();
     }
 
-    // 🔹 PEEK
+    // PEEK
     public void peek() {
 
         if (mainStack.isEmpty()) {
