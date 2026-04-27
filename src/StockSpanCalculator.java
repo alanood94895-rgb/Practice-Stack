@@ -28,7 +28,6 @@ public class StockSpanCalculator {
         }
 
         // Step-by-step demo
-        System.out.println("\n===== STEP-BY-STEP =====");
         calculateSpanStepByStep(new int[]{100, 80, 60, 70, 60, 75, 85});
     }
 
