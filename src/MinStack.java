@@ -95,6 +95,16 @@ public class MinStack {
 
         System.out.println("-----------------------");
     }
+    // 🔹 APPROACH 1: PAIR METHOD
+    class PairMinStack {
+
+        static class Pair {
+            int value;
+            int min;
+
+            Pair(int value, int min) {
+                this.value = value;
+                this.min = min;
 }
         }
 }
