@@ -100,7 +100,7 @@ public class QueueUsingTwoStacks<T> {
         // Show logical queue
         System.out.print("Queue Order:  ");
 
-        // First: outputStack (top to bottom)
+        // outputStack top to bottom)
         for (int i = outputStack.size() - 1; i >= 0; i--) {
             System.out.print(outputStack.get(i) + " ");
         }
