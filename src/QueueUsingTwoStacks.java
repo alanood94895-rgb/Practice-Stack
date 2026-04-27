@@ -38,6 +38,16 @@ public class QueueUsingTwoStacks {
                     System.out.println("\nDequeue: Queue is empty");
                     return null;
                 }
+                // Transfer only if needed
+                if (outputStack.isEmpty()) {
+                    transfer();
+                }
+
+                T value = outputStack.pop();
+                System.out.println("\nDequeue: " + value);
+                displayState();
+                return value;
+            }
         }
         }
 }
