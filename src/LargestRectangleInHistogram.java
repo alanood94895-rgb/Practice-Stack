@@ -38,8 +38,6 @@ public class LargestRectangleInHistogram {
         int maxArea = 0;
         int i = 0;
 
-        System.out.println("Step-by-step:");
-
         while (i < heights.length) {
 
             // PUSH if increasing
