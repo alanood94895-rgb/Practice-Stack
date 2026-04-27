@@ -31,6 +31,13 @@ public class QueueUsingTwoStacks {
             inputStack.push(element);
             System.out.println("\nEnqueue: " + element);
             displayState();
+            // 🔹 DEQUEUE
+            public T dequeue() {
+
+                if (isEmpty()) {
+                    System.out.println("\nDequeue: Queue is empty");
+                    return null;
+                }
         }
         }
 }
