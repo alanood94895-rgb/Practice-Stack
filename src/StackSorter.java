@@ -18,7 +18,7 @@ public class StackSorter {
         processStack(s5, "Stack 5");
     }
 
-    // 🔹 CREATE STACK
+    // CREATE STACK
     public static Stack<Integer> createStack(int[] arr) {
         Stack<Integer> stack = new Stack<>();
         for (int num : arr) {
