@@ -28,6 +28,15 @@ public class InfixToPostfixConverter {
 
         }
         // infixToPostfix
+        public static String infixToPostfix(String infix) {
 
+            Stack<Character> ops = new Stack<>();
+            StringBuilder output = new StringBuilder();
+
+            System.out.println("\nStep-by-step:");
+
+            for (int i = 0; i < infix.length(); i++) {
+
+                char ch = infix.charAt(i);
     }
 }
