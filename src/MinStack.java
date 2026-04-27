@@ -60,5 +60,16 @@ public class MinStack {
             System.out.println("\nPop: " + removed);
             display();
         }
+        // 🔹 PEEK
+        public void peek() {
+
+            if (mainStack.isEmpty()) {
+                System.out.println("\nPeek: Stack is empty");
+                return;
+            }
+
+            System.out.println("\nPeek: " + mainStack.peek());
+            display();
+        }
         }
 }
