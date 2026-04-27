@@ -82,7 +82,7 @@ public class NextGreaterElementFinder {
         return result;
     }
 
-    // 🔹 CIRCULAR NEXT GREATER
+    // CIRCULAR NEXT GREATER
     public static int[] findNextGreaterElementCircular(int[] arr) {
 
         int n = arr.length;
