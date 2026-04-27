@@ -92,3 +92,10 @@ col = stack.isEmpty() ? 0 : stack.peek().col + 1;
 
         return solutions;
     }
+// 🔹 DISPLAY ALL SOLUTIONS COUNT
+public static void displayAllSolutions(int n) {
+
+    int count = solveNQueens(n);
+
+    System.out.println("Total Solutions: " + count);
+}
