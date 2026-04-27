@@ -63,9 +63,9 @@ public class LargestRectangleInHistogram {
                 maxArea = Math.max(maxArea, area);
 
                 System.out.println("Pop index " + top +
-                        " → height=" + height +
-                        ", width=" + width +
-                        ", area=" + area);
+                        "height=" + height +
+                        "width=" + width +
+                        "area=" + area);
             }
 
             System.out.println("Stack: " + stack);
