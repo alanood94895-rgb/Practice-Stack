@@ -70,6 +70,19 @@ public class NextGreaterElementFinder {
         }
         return result;
     }
+    // 🔹 CIRCULAR NEXT GREATER
+    public static int[] findNextGreaterElementCircular(int[] arr) {
+
+        int n = arr.length;
+        int[] result = new int[n];
+
+        for (int i = 0; i < n; i++) result[i] = -1;
+
+        Stack<Integer> stack = new Stack<>();
+
+        for (int i = 0; i < 2 * n; i++) {
+
+            int index = i % n;
     }
       }
 }
