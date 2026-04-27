@@ -37,7 +37,7 @@ public class MinStack {
         pairStack.display();
     }
 
-    // 🔹 PUSH
+    // PUSH
     public void push(int value) {
 
         mainStack.push(value);
