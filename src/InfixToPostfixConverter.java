@@ -78,7 +78,8 @@ public class InfixToPostfixConverter {
                     return "ERROR";
                 }
 
-                ops.pop(); // remove '('
+                // REMOVE
+                ops.pop();
             }
 
             // OPERATOR
