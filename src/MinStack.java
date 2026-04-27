@@ -14,5 +14,9 @@ public class MinStack {
             stack.push(2);
             stack.push(8);
             stack.getMin();
+            stack.pop();
+            stack.pop();
+            stack.getMin();
+            stack.peek();
         }
 }
