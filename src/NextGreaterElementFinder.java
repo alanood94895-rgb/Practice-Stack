@@ -35,5 +35,20 @@ public class NextGreaterElementFinder {
         System.out.println("\nStep-by-step (Next Greater):");
 
         for (int i = 0; i < n; i++) {
+
+            System.out.println("\nProcessing index " + i + " value " + arr[i]);
+
+            while (!stack.isEmpty() && arr[stack.peek()] < arr[i]) {
+                int idx = stack.pop();
+                result[idx] = arr[i];
+                System.out.println("Pop index " + idx + " → set result[" + idx + "] = " + arr[i]);
+            }
+
+            stack.push(i);
+            System.out.println("Push index " + i);
+            System.out.println("Stack: " + stack);
+        }
+
+    }
       }
 }
