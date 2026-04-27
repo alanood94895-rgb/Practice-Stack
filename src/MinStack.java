@@ -18,5 +18,11 @@ public class MinStack {
             stack.pop();
             stack.getMin();
             stack.peek();
+            stack.pop();
+            stack.pop();
+            stack.pop();
+            stack.pop(); // empty case
+            stack.getMin(); // empty case
+
         }
 }
