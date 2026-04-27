@@ -24,7 +24,7 @@ public class QueueUsingTwoStacks {
             queue.dequeue();
             queue.dequeue(); // test empty later
             queue.dequeue(); // edge case
-            queue.peek();    // edge case
+            queue.peek();
         }
         }
 }
