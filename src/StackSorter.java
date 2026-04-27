@@ -12,6 +12,15 @@ public class StackSorter {
         processStack(s3, "Stack 3");
         processStack(s4, "Stack 4");
         processStack(s5, "Stack 5");
+
+        // 🔹 CREATE STACK
+        public static Stack<Integer> createStack(int[] arr) {
+            Stack<Integer> stack = new Stack<>();
+            for (int num : arr) {
+                stack.push(num);
+            }
+            return stack;
+        }
     }
     }
 }
