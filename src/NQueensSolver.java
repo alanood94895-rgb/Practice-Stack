@@ -16,4 +16,9 @@ public class NQueensSolver {
 
         int[] testCases = {0, 1, 2, 3, 4, 5, 6, 8};
 
+        for (int n : testCases) {
+            System.out.println("\n==============================");
+            System.out.println("N = " + n);
+
+            displayAllSolutions(n);
     }
