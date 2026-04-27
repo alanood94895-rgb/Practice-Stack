@@ -59,7 +59,7 @@ public class NextGreaterElementFinder {
         return result;
     }
 
-    // 🔹 NEXT SMALLER ELEMENT
+    // NEXT SMALLER ELEMENT
     public static int[] findNextSmallerElement(int[] arr) {
 
         int n = arr.length;
