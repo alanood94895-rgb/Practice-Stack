@@ -92,12 +92,11 @@ public class LargestRectangleInHistogram {
         return maxArea;
     }
 
-    // AREA HELPER
     public static int calculateArea(int[] heights, int start, int end, int height) {
         return height * (end - start + 1);
     }
 
-    // 🔹 DISPLAY HISTOGRAM (ASCII)
+    // DISPLAY HISTOGRAM
     public static void displayHistogram(int[] heights) {
 
         System.out.println("Histogram:");
