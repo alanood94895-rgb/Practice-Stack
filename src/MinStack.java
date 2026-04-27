@@ -90,4 +90,11 @@ public class MinStack {
         System.out.println("Min Stack:  " + minStack);
 
         if (!minStack.isEmpty()) {
+            System.out.println("Min Value: " + minStack.peek());
+        }
+
+        System.out.println("-----------------------");
+    }
+}
+        }
 }
