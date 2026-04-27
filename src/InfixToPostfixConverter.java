@@ -52,5 +52,21 @@ public class InfixToPostfixConverter {
                     output.append(number).append(" ");
                     i--; // adjust index
                 }
-    }
+                else if (ch == '(') {
+                    ops.push(ch);
+                }
+
+                // HANDLE ')'
+                else if (ch == ')') {
+                    while (!ops.isEmpty() && ops.peek() != '(') {
+                        output.append(ops.pop()).append(" ");
+                    }
+
+                    if (ops.isEmpty())
+                        throw new RuntimeException("Unmatched parentheses");
+
+                    ops.pop(); // remove '('
+                }
+
+            }
 }
