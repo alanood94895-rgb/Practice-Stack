@@ -127,3 +127,19 @@ public static void calculateSpanStepByStep(int[] prices) {
 
         System.out.println("Span: " + span[i]);
         System.out.print("Stack: ");
+        for (int idx : stack) {
+            System.out.print("(" + idx + ":" + prices[idx] + ") ");
+        }
+
+        System.out.println();
+    }
+}
+
+// 🔹 ANALYSIS
+public static void analyzeSpans(int[] spans) {
+
+    if (spans.length == 0) return;
+
+    int max = spans[0];
+    int day = 0;
+    int sum = 0;
