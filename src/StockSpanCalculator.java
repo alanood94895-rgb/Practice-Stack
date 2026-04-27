@@ -73,7 +73,7 @@ public class StockSpanCalculator {
         return span;
     }
 
-    // 🔹 DISPLAY TABLE
+    // DISPLAY TABLE
     public static void displayResults(int[] prices, int[] spans) {
 
         if (prices.length == 0) {
