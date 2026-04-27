@@ -34,3 +34,5 @@ public static boolean isSafe(Position pos, Stack<Position> queens) {
 
     for (Position q : queens) {
 
+// same column
+        if (q.col == pos.col) return false;
