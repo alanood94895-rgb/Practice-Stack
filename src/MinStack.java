@@ -73,7 +73,7 @@ public class MinStack {
     public void peek() {
 
         if (mainStack.isEmpty()) {
-            System.out.println("\nPeek: Stack is empty");
+            System.out.println("Peek: Stack is empty");
             return;
         }
 
