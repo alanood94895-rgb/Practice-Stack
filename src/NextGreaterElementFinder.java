@@ -13,7 +13,9 @@ public class NextGreaterElementFinder {
 
               int[] nge = findNextGreaterElement(arr);
               displayResults(arr, nge);
-
+              int[] nse = findNextSmallerElement(arr);
+              System.out.println("\nNext Smaller Element:");
+              displayResults(arr, nse);
 
       }
 }
