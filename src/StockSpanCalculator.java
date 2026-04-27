@@ -110,7 +110,6 @@ public class StockSpanCalculator {
         }
     }
 
-    // 🔹 STEP-BY-STEP PROCESS
     public static void calculateSpanStepByStep(int[] prices) {
 
         Stack<Integer> stack = new Stack<>();
@@ -118,9 +117,9 @@ public class StockSpanCalculator {
 
         for (int i = 0; i < prices.length; i++) {
 
-            System.out.println("\nDay " + (i + 1) + " Price: " + prices[i]);
+            System.out.println("Day " + (i + 1) + " Price: " + prices[i]);
 
-            while (!stack.isEmpty() && prices[stack.peek()] <= prices[i]) {
+            while (stack.isEmpty() && prices[stack.peek()] <= prices[i]) {
                 int popped = stack.pop();
                 System.out.println("Pop index " + popped + " (price " + prices[popped] + ")");
             }
@@ -141,7 +140,7 @@ public class StockSpanCalculator {
         }
     }
 
-    // 🔹 ANALYSIS
+    // ANALYSIS
     public static void analyzeSpans(int[] spans) {
 
         if (spans.length == 0) return;
