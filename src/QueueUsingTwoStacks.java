@@ -86,6 +86,8 @@ public class QueueUsingTwoStacks {
 
                 System.out.println("Input Stack:  " + inputStack);
                 System.out.println("Output Stack: " + outputStack);
+// Show logical queue order
+                System.out.print("Queue Order:  ");
 
             }
 }
