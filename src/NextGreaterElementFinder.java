@@ -132,7 +132,7 @@ public class NextGreaterElementFinder {
         System.out.println("For each element, check all elements to the right");
         System.out.println("Time Complexity: O(n^2)");
 
-        System.out.println("\nStack Approach:");
+        System.out.println("Stack Approach:");
         System.out.println("Each element is pushed and popped at most once");
         System.out.println("Time Complexity: O(n)");
     }
