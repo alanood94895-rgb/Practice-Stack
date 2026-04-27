@@ -19,6 +19,7 @@ public class InfixToPostfixConverter {
             System.out.println("Infix: " + infix);
 
             String postfix = infixToPostfix(infix);
+            System.out.println("Final Postfix: " + postfix);
 
 
         }
