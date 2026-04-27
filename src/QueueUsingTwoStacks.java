@@ -91,7 +91,7 @@ public class QueueUsingTwoStacks<T> {
         }
     }
 
-    // 🔹 DISPLAY STATE
+    // DISPLAY STATE
     public void displayState() {
 
         System.out.println("Input Stack:  " + inputStack);
