@@ -22,7 +22,7 @@ public class MinStack {
             stack.pop();
             stack.pop();
             stack.pop(); // empty case
-            stack.getMin(); // empty case
+            stack.getMin();
 
         }
 }
