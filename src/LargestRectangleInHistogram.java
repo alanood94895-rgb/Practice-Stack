@@ -48,7 +48,7 @@ public class LargestRectangleInHistogram {
                 System.out.println("Push index " + i);
                 i++;
             } else {
-                // POP and calculate area
+                // POP
                 int top = stack.pop();
                 int height = heights[top];
 
