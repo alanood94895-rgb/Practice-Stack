@@ -26,7 +26,7 @@ public class NQueensSolver {
             displayAllSolutions(n);
         }
 
-        // Step-by-step demo for N=4
+        // demo for N=4
         System.out.println("\n===== STEP-BY-STEP (N=4) =====");
         solveNQueensStepByStep(4);
     }
