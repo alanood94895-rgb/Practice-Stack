@@ -7,6 +7,7 @@ public class InfixToPostfixConverter {
                 "10 + 2 * 6",
                 "100 * ( 2 + 12 ) / 14",
                 "5 + ((1 + 2) * 4) - 3",
+                "7 + 8 * (3 - 2)",
 
         };
     }
