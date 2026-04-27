@@ -23,6 +23,12 @@ public class MinStack {
             stack.pop();
             stack.pop();
             stack.getMin();
+            // Demonstrate Approach 1
+            System.out.println("\n--- Approach 1 (Pair Method) ---");
+            PairMinStack pairStack = new PairMinStack();
+            pairStack.push(5);
+            pairStack.push(3);
+            pairStack.push(7);
 
         }
 }
