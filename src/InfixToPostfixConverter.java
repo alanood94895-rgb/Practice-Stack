@@ -9,6 +9,7 @@ public class InfixToPostfixConverter {
                 "5 + ((1 + 2) * 4) - 3",
                 "7 + 8 * (3 - 2)",
                 "12.5 + 3.5 * 2",
+                "20 / (5 - 5)" // division by zero case
 
         };
     }
