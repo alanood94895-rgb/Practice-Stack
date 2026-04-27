@@ -9,7 +9,7 @@ public class QueueUsingTwoStacks<T> {
 
         QueueUsingTwoStacks<Integer> queue = new QueueUsingTwoStacks<>();
 
-        System.out.println("Queue Operations:\n");
+        System.out.println("Queue Operations:");
 
         queue.enqueue(10);
         queue.enqueue(20);
