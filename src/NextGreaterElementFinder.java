@@ -89,4 +89,12 @@ public class NextGreaterElementFinder {
             result[idx] = arr[index];
         }
       }
+
+            if (i < n) {
+        stack.push(index);
+    }
+}
+
+        return result;
+    }
 }
