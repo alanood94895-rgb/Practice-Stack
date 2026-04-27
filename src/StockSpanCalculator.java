@@ -64,3 +64,16 @@ public static int[] calculateSpanBruteForce(int[] prices) {
         for (int j = i - 1; j >= 0; j--) {
             if (prices[j] <= prices[i]) span[i]++;
             else break;
+        }
+    }
+
+    return span;
+}
+
+// 🔹 DISPLAY TABLE
+public static void displayResults(int[] prices, int[] spans) {
+
+    if (prices.length == 0) {
+        System.out.println("Empty data.");
+        return;
+    }
