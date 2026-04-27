@@ -54,7 +54,7 @@ public class StockSpanCalculator {
         return span;
     }
 
-    // 🔹 BRUTE FORCE O(n²)
+    //  BRUTE FORCE
     public static int[] calculateSpanBruteForce(int[] prices) {
 
         int n = prices.length;
