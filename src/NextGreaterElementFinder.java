@@ -115,3 +115,7 @@ public static void displayResults(int[] arr, int[] result) {
 public static void compareApproaches() {
     System.out.println("\n==============================");
     System.out.println("Comparison:");
+
+    System.out.println("Brute Force:");
+    System.out.println("For each element, check all elements to the right");
+    System.out.println("Time Complexity: O(n^2)");
