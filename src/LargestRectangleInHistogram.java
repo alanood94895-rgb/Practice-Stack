@@ -121,4 +121,36 @@ public static void displayHistogram(int[] heights) {
         System.out.print("--");
     }
     System.out.println();
+    // values
+    for (int h : heights) {
+        System.out.print(h + " ");
+    }
+    System.out.println();
+}
+
+// 🔹 DISPLAY RESULT
+public static void displayResult(int[] heights, int maxArea) {
+    System.out.println("\nMax Rectangle Area: " + maxArea);
+}
+
+// 🔹 BRUTE FORCE VS STACK
+public static void compareApproaches() {
+
+    System.out.println("\n==============================");
+    System.out.println("Comparison:");
+
+    System.out.println("Brute Force:");
+    System.out.println("Check all pairs → O(n^2)");
+
+    System.out.println("\nStack Approach:");
+    System.out.println("Single pass using stack → O(n)");
+}
+
+// 🔹 BONUS: BINARY MATRIX
+public static int largestRectangleInMatrix(int[][] matrix) {
+
+    if (matrix.length == 0) return 0;
+
+    int cols = matrix[0].length;
+    int[] heights = new int[cols];
 
