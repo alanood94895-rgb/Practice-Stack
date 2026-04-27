@@ -1,104 +1,127 @@
 import java.util.Stack;
 
 public class InfixToPostfixConverter {
-    public static void main(String[] args){
 
-        // 8 different infix expressions
+    public static void main(String[] args) {
+
         String[] expressions = {
-                "3 + 4 * 2",
-                "(1 + 2) * 3",
-                "10 + 2 * 6",
-                "100 * ( 2 + 12 ) / 14",
-                "5 + ((1 + 2) * 4) - 3",
-                "7 + 8 * (3 - 2)",
-                "12.5 + 3.5 * 2",
-                "20 / (5 - 5)"
-
+                "3+4*2",
+                "(1+2)*3",
+                "10+2*6",
+                "100*(2+12)/14",
+                "5+((1+2)*4)-3",
+                "7+8*(3-2)",
+                "12.5+3.5*2",
+                "20/(5-5)" // division by zero case
         };
+
         for (String infix : expressions) {
+            System.out.println("\n==============================");
             System.out.println("Infix: " + infix);
 
             String postfix = infixToPostfix(infix);
-            System.out.println("Final Postfix: " + postfix);
-            double result = PostfixEvaluator.evaluatePostfix(postfix);
-            System.out.println("Result: " + result);
 
-            System.out.println("Error: " + e.getMessage());
+            if (postfix.equals("ERROR")) {
+                System.out.println("Conversion failed.");
+                continue;
+            }
+
+            System.out.println("Postfix: " + postfix);
+
+            double result = evaluatePostfix(postfix);
+
+            if (result == Double.MIN_VALUE) {
+                System.out.println("Evaluation failed.");
+            } else {
+                System.out.println("Result: " + result);
+            }
         }
+    }
 
-        }
-        // infixToPostfix
-        public static String infixToPostfix(String infix) {
+    // INFIX → POSTFIX
+    public static String infixToPostfix(String infix) {
 
-            Stack<Character> ops = new Stack<>();
-            StringBuilder output = new StringBuilder();
+        Stack<Character> ops = new Stack<>();
+        StringBuilder output = new StringBuilder();
 
-            System.out.println("\nStep-by-step:");
+        System.out.println("\nStep-by-step:");
 
-            for (int i = 0; i < infix.length(); i++) {
+        for (int i = 0; i < infix.length(); i++) {
 
-                char ch = infix.charAt(i);
+            char ch = infix.charAt(i);
 
-                // HANDLE NUMBERS
-                if (Character.isDigit(ch) || ch == '.') {
-                    StringBuilder number = new StringBuilder();
+            // NUMBER (multi-digit + decimal)
+            if (Character.isDigit(ch) || ch == '.') {
+                StringBuilder number = new StringBuilder();
 
-                    while (i < infix.length() &&
-                            (Character.isDigit(infix.charAt(i)) || infix.charAt(i) == '.')) {
-                        number.append(infix.charAt(i));
-                        i++;
-                    }
-
-                    output.append(number).append(" ");
-                    i--; // adjust index
-                }
-                else if (ch == '(') {
-                    ops.push(ch);
+                while (i < infix.length() &&
+                        (Character.isDigit(infix.charAt(i)) || infix.charAt(i) == '.')) {
+                    number.append(infix.charAt(i));
+                    i++;
                 }
 
-                // HANDLE ')'
-                else if (ch == ')') {
-                    while (!ops.isEmpty() && ops.peek() != '(') {
-                        output.append(ops.pop()).append(" ");
-                    }
+                output.append(number).append(" ");
+                i--;
+            }
 
-                    if (ops.isEmpty())
-                        throw new RuntimeException("Unmatched parentheses");
+            // '('
+            else if (ch == '(') {
+                ops.push(ch);
+            }
 
-                    ops.pop(); // remove '('
-
-                    else if (isOperator(ch)) {
-                        while (!ops.isEmpty() &&
-                                ops.peek() != '(' &&
-                                precedence(ops.peek()) >= precedence(ch)) {
-
-                            output.append(ops.pop()).append(" ");
-                        }
-
-                        ops.push(ch);
-                    }
-                    else {
-                        throw new RuntimeException("Invalid character: " + ch);
-                    }
-
-                    // PRINT STEP
-                    System.out.println("Token: " + ch);
-                    System.out.println("Stack: " + ops);
-                    System.out.println("Output: " + output);
-                    System.out.println("-------------------");
+            // ')'
+            else if (ch == ')') {
+                while (!ops.isEmpty() && ops.peek() != '(') {
+                    output.append(ops.pop()).append(" ");
                 }
 
-                // POP REMAINING OPERATORS
-                while (!ops.isEmpty()) {
-                    if (ops.peek() == '(')
-                        throw new RuntimeException("Unmatched parentheses");
+                if (ops.isEmpty()) {
+                    System.out.println("Error: Unmatched parentheses");
+                    return "ERROR";
+                }
+
+                ops.pop(); // remove '('
+            }
+
+            // OPERATOR
+            else if (isOperator(ch)) {
+                while (!ops.isEmpty() &&
+                        ops.peek() != '(' &&
+                        precedence(ops.peek()) >= precedence(ch)) {
 
                     output.append(ops.pop()).append(" ");
                 }
 
-                return output.toString().trim();
+                ops.push(ch);
             }
-                }
+
+            // INVALID CHARACTER
+            else {
+                System.out.println("Error: Invalid character -> " + ch);
+                return "ERROR";
+            }
+
+            // PRINT STEP
+            System.out.println("Token: " + ch);
+            System.out.println("Stack: " + ops);
+            System.out.println("Output: " + output);
+            System.out.println("-------------------");
+        }
+
+        // POP REMAINING OPERATORS
+        while (!ops.isEmpty()) {
+            if (ops.peek() == '(') {
+                System.out.println("Error: Unmatched parentheses");
+                return "ERROR";
+            }
+
+            output.append(ops.pop()).append(" ");
+        }
+
+        return output.toString().trim();
+    }
+
+    // EVALUATE POSTFIX
     public static double evaluatePostfix(String postfix) {
 
         Stack<Double> stack = new Stack<>();
@@ -106,48 +129,65 @@ public class InfixToPostfixConverter {
 
         for (String token : tokens) {
 
+            // NUMBER
             if (token.matches("\\d+(\\.\\d+)?")) {
                 stack.push(Double.parseDouble(token));
             }
 
+            // OPERATOR
             else if (token.length() == 1 && isOperator(token.charAt(0))) {
 
-                if (stack.size() < 2)
-                    throw new RuntimeException("Invalid postfix expression");
-                // PRECEDENCE METHOD
-                public static int precedence(char op) {
-                    switch (op) {
-                        case '^': return 3;
-                        case '*':
-                        case '/':
-                        case '%': return 2;
-                        case '+':
-                        case '-': return 1;
-                        default: return 0;
-                    }
-                }
-                public static boolean isOperator(char ch) {
-                    return ch == '+' || ch == '-' || ch == '*' ||
-                            ch == '/' || ch == '%' || ch == '^';
+                if (stack.size() < 2) {
+                    System.out.println("Error: Invalid expression");
+                    return Double.MIN_VALUE;
                 }
 
-                // APPLY OPERATION
-                public static double applyOperation(double a, double b, char op) {
+                double b = stack.pop();
+                double a = stack.pop();
 
-                    switch (op) {
-                        case '+': return a + b;
-                        case '-': return a - b;
-                        case '*': return a * b;
-                        case '/':
-                            if (b == 0) throw new ArithmeticException("Division by zero");
-                            return a / b;
-                        case '%': return a % b;
-                        case '^': return Math.pow(a, b);
-                    }
-
-                    throw new RuntimeException("Unknown operator");
+                // DIVISION BY ZERO CHECK
+                if (token.charAt(0) == '/' && b == 0) {
+                    System.out.println("Error: Division by zero");
+                    return Double.MIN_VALUE;
                 }
 
-
+                double result = applyOperation(a, b, token.charAt(0));
+                stack.push(result);
             }
+        }
+
+        if (stack.size() != 1) {
+            System.out.println("Error: Invalid postfix expression");
+            return Double.MIN_VALUE;
+        }
+
+        return stack.pop();
+    }
+
+    // PRECEDENCE
+    public static int precedence(char op) {
+        if (op == '^') return 3;
+        if (op == '*' || op == '/' || op == '%') return 2;
+        if (op == '+' || op == '-') return 1;
+        return 0;
+    }
+
+    // CHECK OPERATOR
+    public static boolean isOperator(char ch) {
+        return ch == '+' || ch == '-' || ch == '*' ||
+                ch == '/' || ch == '%' || ch == '^';
+    }
+
+    // APPLY OPERATION
+    public static double applyOperation(double a, double b, char op) {
+
+        if (op == '+') return a + b;
+        if (op == '-') return a - b;
+        if (op == '*') return a * b;
+        if (op == '/') return a / b;
+        if (op == '%') return a % b;
+        if (op == '^') return Math.pow(a, b);
+
+        return 0;
+    }
 }
