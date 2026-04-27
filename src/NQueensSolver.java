@@ -22,3 +22,15 @@ public class NQueensSolver {
 
             displayAllSolutions(n);
     }
+    }
+
+    // Step-by-step demo for N=4
+        System.out.println("\n===== STEP-BY-STEP (N=4) =====");
+    solveNQueensStepByStep(4);
+}
+
+// 🔹 CHECK SAFE POSITION
+public static boolean isSafe(Position pos, Stack<Position> queens) {
+
+    for (Position q : queens) {
+
