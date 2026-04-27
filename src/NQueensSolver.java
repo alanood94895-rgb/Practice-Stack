@@ -49,3 +49,6 @@ public static int solveNQueens(int n) {
     if (n <= 0) return 0;
     if (n == 1) return 1;
     if (n == 2 || n == 3) return 0;
+    Stack<Position> stack = new Stack<>();
+    int row = 0, col = 0;
+    int solutions = 0;
