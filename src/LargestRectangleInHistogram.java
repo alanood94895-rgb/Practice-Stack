@@ -135,16 +135,13 @@ public class LargestRectangleInHistogram {
         System.out.println("\nMax Rectangle Area: " + maxArea);
     }
 
-    // 🔹 BRUTE FORCE VS STACK
     public static void compareApproaches() {
-
-        System.out.println("\n==============================");
         System.out.println("Comparison:");
 
         System.out.println("Brute Force:");
         System.out.println("Check all pairs → O(n^2)");
 
-        System.out.println("\nStack Approach:");
+        System.out.println("Stack Approach:");
         System.out.println("Single pass using stack → O(n)");
     }
 
