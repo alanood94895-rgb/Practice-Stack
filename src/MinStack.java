@@ -44,5 +44,12 @@ public class MinStack {
             System.out.println("\nPush: " + value);
             display();
         }
+        // 🔹 POP
+        public void pop() {
+
+            if (mainStack.isEmpty()) {
+                System.out.println("\nPop: Stack is empty");
+                return;
+            }
         }
 }
