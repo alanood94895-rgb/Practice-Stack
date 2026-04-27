@@ -31,7 +31,7 @@ public class StockSpanCalculator {
         calculateSpanStepByStep(new int[]{100, 80, 60, 70, 60, 75, 85});
     }
 
-    // 🔹 O(n) STACK METHOD
+    // STACK METHOD
     public static int[] calculateSpan(int[] prices) {
 
         int n = prices.length;
