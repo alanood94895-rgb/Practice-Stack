@@ -120,5 +120,11 @@ public void push(int value) {
     if (stack.isEmpty()) {
         stack.push(new Pair(value, value));
     } else {
+        int currentMin = Math.min(value, stack.peek().min);
+        stack.push(new Pair(value, currentMin));
+    }
+}
+
+    }
 
 }
