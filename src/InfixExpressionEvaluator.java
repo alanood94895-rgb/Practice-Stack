@@ -99,7 +99,6 @@ public class InfixExpressionEvaluator {
             displayStacks(operandStack, operatorStack);
         }
 
-        // FINAL EVALUATION
         while (!operatorStack.isEmpty()) {
             if (!processTop(operandStack, operatorStack)) return Double.MIN_VALUE;
         }
@@ -112,7 +111,6 @@ public class InfixExpressionEvaluator {
         return operandStack.pop();
     }
 
-    // 🔹 PROCESS TOP OPERATOR
     public static boolean processTop(Stack<Double> operands, Stack<Character> operators) {
 
         if (operands.size() < 2) {
@@ -137,7 +135,6 @@ public class InfixExpressionEvaluator {
         return true;
     }
 
-    // 🔹 APPLY OPERATION
     public static double applyOperation(double a, double b, char op) {
 
         if (op == '+') return a + b;
