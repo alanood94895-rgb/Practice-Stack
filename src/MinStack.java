@@ -25,7 +25,7 @@ public class MinStack {
         stack.pop();
         stack.pop();
         stack.pop();
-        stack.getMin(); // empty case
+        stack.getMin();
 
         // Demonstrate Approach 1
         System.out.println("\n--- Approach 1 (Pair Method) ---");
