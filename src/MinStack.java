@@ -51,5 +51,14 @@ public class MinStack {
                 System.out.println("\nPop: Stack is empty");
                 return;
             }
+            int removed = mainStack.pop();
+
+            if (!minStack.isEmpty() && removed == minStack.peek()) {
+                minStack.pop();
+            }
+
+            System.out.println("\nPop: " + removed);
+            display();
+        }
         }
 }
