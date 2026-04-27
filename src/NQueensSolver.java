@@ -165,7 +165,7 @@ public class NQueensSolver {
         System.out.println("Stack: " + stack);
     }
 
-    // DISPLAY BOARD (ASCII)
+    // DISPLAY BOARD
     public static void displayBoard(Stack<Position> queens, int n) {
 
         System.out.println("Board:");
