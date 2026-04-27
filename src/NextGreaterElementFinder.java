@@ -119,7 +119,7 @@ public class NextGreaterElementFinder {
 
         System.out.println("Index Value Next");
         for (int i = 0; i < arr.length; i++) {
-            System.out.println(i + "\t" + arr[i] + "\t" + result[i]);
+            System.out.println(i + "t" + arr[i] + "t" + result[i]);
         }
     }
 
