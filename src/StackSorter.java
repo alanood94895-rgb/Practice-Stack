@@ -81,3 +81,17 @@ public static void sortStackRecursive(Stack<Integer> stack) {
     // Insert in correct position
     insertInSortedOrder(stack, temp);
 }
+// 🔹 INSERT IN SORTED ORDER (HELPER)
+public static void insertInSortedOrder(Stack<Integer> stack, int value) {
+
+    if (stack.isEmpty() || stack.peek() <= value) {
+        stack.push(value);
+        return;
+    }
+
+    int temp = stack.pop();
+
+    insertInSortedOrder(stack, value);
+
+    stack.push(temp);
+}
