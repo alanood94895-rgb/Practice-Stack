@@ -40,5 +40,17 @@ public class InfixToPostfixConverter {
                 char ch = infix.charAt(i);
 
                 // HANDLE NUMBERS
+                if (Character.isDigit(ch) || ch == '.') {
+                    StringBuilder number = new StringBuilder();
+
+                    while (i < infix.length() &&
+                            (Character.isDigit(infix.charAt(i)) || infix.charAt(i) == '.')) {
+                        number.append(infix.charAt(i));
+                        i++;
+                    }
+
+                    output.append(number).append(" ");
+                    i--; // adjust index
+                }
     }
 }
