@@ -28,7 +28,7 @@ public class QueueUsingTwoStacks<T> {
         queue.peek();
     }
 
-    // 🔹 ENQUEUE
+    //  ENQUEUE
     public void enqueue(T element) {
         inputStack.push(element);
         System.out.println("\nEnqueue: " + element);
