@@ -71,7 +71,7 @@ public class LargestRectangleInHistogram {
             System.out.println("Stack: " + stack);
         }
 
-        while (!stack.isEmpty()) {
+        while (stack.isEmpty()) {
             int top = stack.pop();
             int height = heights[top];
 
