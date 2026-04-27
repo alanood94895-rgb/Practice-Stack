@@ -24,7 +24,7 @@ public class QueueUsingTwoStacks<T> {
         queue.dequeue();
         queue.dequeue();
         queue.dequeue();
-        queue.dequeue(); // edge case
+        queue.dequeue();
         queue.peek();
     }
 
