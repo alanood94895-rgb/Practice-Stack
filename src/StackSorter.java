@@ -94,4 +94,17 @@ public static void insertInSortedOrder(Stack<Integer> stack, int value) {
     insertInSortedOrder(stack, value);
 
     stack.push(temp);
+    // 🔹 DISPLAY STACK
+    public static void displayStack(Stack<Integer> stack, String name) {
+
+        System.out.println(name + ": " + stack);
+
+        if (stack.isEmpty()) {
+            System.out.println("Stack is empty.");
+        } else {
+            System.out.println("Top element: " + stack.peek());
+            System.out.println("Size: " + stack.size());
+        }
+    }
+}
 }
