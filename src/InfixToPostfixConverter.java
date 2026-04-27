@@ -66,6 +66,17 @@ public class InfixToPostfixConverter {
                         throw new RuntimeException("Unmatched parentheses");
 
                     ops.pop(); // remove '('
+
+                    else if (isOperator(ch)) {
+                        while (!ops.isEmpty() &&
+                                ops.peek() != '(' &&
+                                precedence(ops.peek()) >= precedence(ch)) {
+
+                            output.append(ops.pop()).append(" ");
+                        }
+
+                        ops.push(ch);
+                    }
                 }
 
             }
