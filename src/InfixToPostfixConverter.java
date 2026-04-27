@@ -62,7 +62,7 @@ public class InfixToPostfixConverter {
                 i--;
             }
 
-            // '('
+
             else if (ch == '(') {
                 ops.push(ch);
             }
