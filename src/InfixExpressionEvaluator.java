@@ -66,15 +66,14 @@ public class InfixExpressionEvaluator {
                 System.out.println("Push operator: (");
             }
 
-            // ')'
             else if (ch == ')') {
 
-                while (!operatorStack.isEmpty() && operatorStack.peek() != '(') {
+                while (operatorStack.isEmpty() && operatorStack.peek() != '(') {
                     if (!processTop(operandStack, operatorStack)) return Double.MIN_VALUE;
                 }
 
                 if (!operatorStack.isEmpty()) {
-                    operatorStack.pop(); // remove '('
+                    operatorStack.pop();
                 }
             }
 
@@ -92,7 +91,6 @@ public class InfixExpressionEvaluator {
                 System.out.println("Push operator: " + ch);
             }
 
-            // INVALID CHARACTER
             else {
                 System.out.println("Invalid character: " + ch);
                 return Double.MIN_VALUE;
