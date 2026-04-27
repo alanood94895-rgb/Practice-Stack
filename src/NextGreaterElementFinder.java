@@ -24,7 +24,7 @@ public class NextGreaterElementFinder {
             displayResults(arr, nse);
 
             int[] circular = findNextGreaterElementCircular(arr);
-            System.out.println("\nCircular Next Greater:");
+            System.out.println("Circular Next Greater:");
             displayResults(arr, circular);
         }
 
