@@ -137,7 +137,7 @@ public class LargestRectangleInHistogram {
         System.out.println("Comparison:");
 
         System.out.println("Brute Force:");
-        System.out.println("Check all pairs → O(n^2)");
+        System.out.println("Check all pairs O(n^2)");
 
         System.out.println("Stack Approach:");
         System.out.println("Single pass using stack → O(n)");
