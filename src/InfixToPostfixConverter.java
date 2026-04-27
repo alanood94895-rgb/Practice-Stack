@@ -17,7 +17,6 @@ public class InfixToPostfixConverter {
         };
 
         for (String infix : expressions) {
-            System.out.println("\n==============================");
             System.out.println("Infix: " + infix);
 
             String postfix = infixToPostfix(infix);
