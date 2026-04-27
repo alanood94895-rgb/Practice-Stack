@@ -77,3 +77,9 @@ public static void displayResults(int[] prices, int[] spans) {
         System.out.println("Empty data.");
         return;
     }
+    System.out.println("\nDay\tPrice\tSpan");
+
+    for (int i = 0; i < prices.length; i++) {
+        System.out.println((i + 1) + "\t" + prices[i] + "\t" + spans[i]);
+    }
+}
