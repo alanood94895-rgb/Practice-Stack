@@ -8,6 +8,11 @@ public class MinStack {
             MinStack stack = new MinStack();
 
             stack.push(5);
-
+            stack.push(3);
+            stack.push(7);
+            stack.getMin();
+            stack.push(2);
+            stack.push(8);
+            stack.getMin();
         }
 }
