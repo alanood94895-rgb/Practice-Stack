@@ -29,8 +29,6 @@ public class StackSorter {
 
     // PROCESS STACK
     public static void processStack(Stack<Integer> stack, String name) {
-
-        System.out.println("\n==============================");
         System.out.println(name);
 
         displayStack(stack, "Original");
