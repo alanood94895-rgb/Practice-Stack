@@ -52,3 +52,6 @@ public static int solveNQueens(int n) {
     Stack<Position> stack = new Stack<>();
     int row = 0, col = 0;
     int solutions = 0;
+    while (true) {
+
+        boolean placed = false;
