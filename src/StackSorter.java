@@ -1,6 +1,10 @@
+import java.util.Stack;
+
 public class StackSorter {
-    public static void main (String[] args){
-// 5 test stacks
+
+    public static void main(String[] args) {
+
+        // 5 test stacks
         Stack<Integer> s1 = createStack(new int[]{3, 1, 4, 2, 5});
         Stack<Integer> s2 = createStack(new int[]{10, 9, 8, 7, 6});
         Stack<Integer> s3 = createStack(new int[]{1, 2, 3, 4, 5});
@@ -12,16 +16,18 @@ public class StackSorter {
         processStack(s3, "Stack 3");
         processStack(s4, "Stack 4");
         processStack(s5, "Stack 5");
-
-        // 🔹 CREATE STACK
-        public static Stack<Integer> createStack(int[] arr) {
-            Stack<Integer> stack = new Stack<>();
-            for (int num : arr) {
-                stack.push(num);
-            }
-            return stack;
-        }
     }
+
+    // 🔹 CREATE STACK
+    public static Stack<Integer> createStack(int[] arr) {
+        Stack<Integer> stack = new Stack<>();
+        for (int num : arr) {
+            stack.push(num);
+        }
+        return stack;
+    }
+
+    // 🔹 PROCESS STACK
     public static void processStack(Stack<Integer> stack, String name) {
 
         System.out.println("\n==============================");
@@ -37,6 +43,7 @@ public class StackSorter {
         sortStackRecursive(sorted);
         displayStack(sorted, "Sorted (Recursive)");
     }
+
     // 🔹 ITERATIVE SORT USING TEMP STACK
     public static Stack<Integer> sortStack(Stack<Integer> stack) {
 
@@ -49,51 +56,54 @@ public class StackSorter {
             int temp = stack.pop();
             System.out.println("\nPopped: " + temp);
 
-        }
-}
-/ Move elements back if needed
+            // Move elements back if needed
             while (!tempStack.isEmpty() && tempStack.peek() < temp) {
-        int moved = tempStack.pop();
-        stack.push(moved);
-        System.out.println("Move back: " + moved);
-    }
+                int moved = tempStack.pop();
+                stack.push(moved);
+                System.out.println("Move back: " + moved);
+            }
 
             tempStack.push(temp);
             System.out.println("Push to tempStack: " + temp);
 
- System.out.println("Original: " + stack);
+            System.out.println("Original: " + stack);
             System.out.println("Temp:     " + tempStack);
-}
+        }
 
         return tempStack;
     }
-// 🔹 RECURSIVE SORT
-public static void sortStackRecursive(Stack<Integer> stack) {
 
-    if (stack.isEmpty()) {
-        return;
+    // 🔹 RECURSIVE SORT
+    public static void sortStackRecursive(Stack<Integer> stack) {
+
+        if (stack.isEmpty()) {
+            return;
+        }
+
+        int temp = stack.pop();
+
+        // Sort remaining stack
+        sortStackRecursive(stack);
+
+        // Insert in correct position
+        insertInSortedOrder(stack, temp);
     }
 
-    int temp = stack.pop();
-// Sort remaining stack
-    sortStackRecursive(stack);
+    // 🔹 INSERT IN SORTED ORDER (HELPER)
+    public static void insertInSortedOrder(Stack<Integer> stack, int value) {
 
-    // Insert in correct position
-    insertInSortedOrder(stack, temp);
-}
-// 🔹 INSERT IN SORTED ORDER (HELPER)
-public static void insertInSortedOrder(Stack<Integer> stack, int value) {
+        if (stack.isEmpty() || stack.peek() <= value) {
+            stack.push(value);
+            return;
+        }
 
-    if (stack.isEmpty() || stack.peek() <= value) {
-        stack.push(value);
-        return;
+        int temp = stack.pop();
+
+        insertInSortedOrder(stack, value);
+
+        stack.push(temp);
     }
 
-    int temp = stack.pop();
-
-    insertInSortedOrder(stack, value);
-
-    stack.push(temp);
     // 🔹 DISPLAY STACK
     public static void displayStack(Stack<Integer> stack, String name) {
 
@@ -106,5 +116,4 @@ public static void insertInSortedOrder(Stack<Integer> stack, int value) {
             System.out.println("Size: " + stack.size());
         }
     }
-}
 }
