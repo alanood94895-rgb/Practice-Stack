@@ -52,3 +52,15 @@ public static int[] calculateSpan(int[] prices) {
 }
 
 // 🔹 BRUTE FORCE O(n²)
+public static int[] calculateSpanBruteForce(int[] prices) {
+
+    int n = prices.length;
+    int[] span = new int[n];
+
+    for (int i = 0; i < n; i++) {
+
+        span[i] = 1;
+
+        for (int j = i - 1; j >= 0; j--) {
+            if (prices[j] <= prices[i]) span[i]++;
+            else break;
