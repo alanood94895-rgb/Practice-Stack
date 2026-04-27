@@ -80,7 +80,7 @@ public class StackSorter {
 
         int temp = stack.pop();
 
-        // Sort remaining stack
+        // Sort stack
         sortStackRecursive(stack);
 
         // Insert in correct position
