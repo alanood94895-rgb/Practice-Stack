@@ -160,11 +160,11 @@ public class StockSpanCalculator {
 
         double avg = (double) sum / spans.length;
 
-        System.out.println("\nMax Span: " + max + " on day " + (day + 1));
+        System.out.println("Max Span: " + max + " on day " + (day + 1));
         System.out.println("Average Span: " + avg);
     }
 
-    // 🔹 PRINT ARRAY
+    // PRINT ARRAY
     public static void printArray(int[] arr) {
         for (int x : arr) System.out.print(x + " ");
         System.out.println();
