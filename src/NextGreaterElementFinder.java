@@ -109,7 +109,7 @@ public class NextGreaterElementFinder {
         return result;
     }
 
-    // 🔹 DISPLAY TABLE
+    // DISPLAY TABLE
     public static void displayResults(int[] arr, int[] result) {
 
         if (arr.length == 0) {
