@@ -102,7 +102,6 @@ public class MinStack {
             System.out.println("Min Value: " + minStack.peek());
         }
 
-        System.out.println("-----------------------");
     }
 }
 
