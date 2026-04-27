@@ -104,3 +104,10 @@ public static void displayResults(int[] arr, int[] result) {
     if (arr.length == 0) {
         System.out.println("Array is empty.");
         return;
+    }
+
+    System.out.println("\nIndex\tValue\tNext");
+    for (int i = 0; i < arr.length; i++) {
+        System.out.println(i + "\t" + arr[i] + "\t" + result[i]);
+    }
+}
