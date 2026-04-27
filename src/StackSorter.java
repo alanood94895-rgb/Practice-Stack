@@ -37,5 +37,17 @@ public class StackSorter {
         sortStackRecursive(sorted);
         displayStack(sorted, "Sorted (Recursive)");
     }
-    }
+    // 🔹 ITERATIVE SORT USING TEMP STACK
+    public static Stack<Integer> sortStack(Stack<Integer> stack) {
+
+        Stack<Integer> tempStack = new Stack<>();
+
+        System.out.println("\nStep-by-step sorting:");
+
+        while (!stack.isEmpty()) {
+
+            int temp = stack.pop();
+            System.out.println("\nPopped: " + temp);
+
+        }
 }
