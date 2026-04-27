@@ -99,6 +99,22 @@ public class InfixToPostfixConverter {
                 return output.toString().trim();
             }
                 }
+    public static double evaluatePostfix(String postfix) {
+
+        Stack<Double> stack = new Stack<>();
+        String[] tokens = postfix.split(" ");
+
+        for (String token : tokens) {
+
+            if (token.matches("\\d+(\\.\\d+)?")) {
+                stack.push(Double.parseDouble(token));
+            }
+
+            else if (token.length() == 1 && isOperator(token.charAt(0))) {
+
+                if (stack.size() < 2)
+                    throw new RuntimeException("Invalid postfix expression");
+
 
             }
 }
