@@ -68,6 +68,8 @@ public class NextGreaterElementFinder {
             }
             stack.push(i);
         }
+        return result;
+    }
     }
       }
 }
