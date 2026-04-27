@@ -77,7 +77,7 @@ public class MinStack {
             return;
         }
 
-        System.out.println("\nPeek: " + mainStack.peek());
+        System.out.println("Peek: " + mainStack.peek());
         display();
     }
 
