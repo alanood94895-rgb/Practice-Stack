@@ -14,5 +14,8 @@ public class InfixToPostfixConverter {
 
         };
         for (String infix : expressions) {
+            System.out.println("Infix: " + infix);
+
+        }
     }
 }
