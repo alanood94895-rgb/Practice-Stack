@@ -83,4 +83,6 @@ public class MinStack {
         System.out.println("\nCurrent Min: " + minStack.peek());
         display();
     }
+    // 🔹 DISPLAY
+
 }
