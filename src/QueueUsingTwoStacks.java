@@ -94,5 +94,9 @@ public class QueueUsingTwoStacks {
             for (int i = outputStack.size() - 1; i >= 0; i--) {
                 System.out.print(outputStack.get(i) + " ");
             }
+// Then: inputStack (bottom to top)
+            for (int i = 0; i < inputStack.size(); i++) {
+                System.out.print(inputStack.get(i) + " ");
+            }
 
         }
