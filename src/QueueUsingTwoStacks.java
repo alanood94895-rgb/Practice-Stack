@@ -72,7 +72,7 @@ public class QueueUsingTwoStacks<T> {
         return value;
     }
 
-    // 🔹 CHECK EMPTY
+    // CHECK EMPTY
     public boolean isEmpty() {
         return inputStack.isEmpty() && outputStack.isEmpty();
     }
