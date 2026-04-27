@@ -9,7 +9,7 @@ public class MinStack {
 
         MinStack stack = new MinStack();
 
-        // 15+ operations
+        // 15 operations
         stack.push(5);
         stack.push(3);
         stack.push(7);
@@ -24,7 +24,7 @@ public class MinStack {
         stack.pop();
         stack.pop();
         stack.pop();
-        stack.pop(); // empty case
+        stack.pop();
         stack.getMin(); // empty case
 
         // Demonstrate Approach 1
