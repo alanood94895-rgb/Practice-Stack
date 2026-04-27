@@ -73,3 +73,11 @@ public static int solveNQueens(int n) {
 
     // If not placed → backtrack
     if (!placed) {
+
+        if (stack.isEmpty()) break;
+
+        Position last = stack.pop();
+        row = last.row;
+        col = last.col + 1;
+    }
+    }
