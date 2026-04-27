@@ -32,6 +32,10 @@ public class MinStack {
             pairStack.push(2);
             pairStack.display();
         }
+        // 🔹 PUSH
+        public void push(int value) {
+
+            mainStack.push(value);
 
         }
 }
