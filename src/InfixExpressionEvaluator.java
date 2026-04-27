@@ -20,7 +20,6 @@ public class InfixExpressionEvaluator {
         };
 
         for (String exp : expressions) {
-            System.out.println("\n==============================");
             System.out.println("Expression: " + exp);
 
             double result = evaluate(exp);
@@ -33,19 +32,19 @@ public class InfixExpressionEvaluator {
         }
     }
 
-    // 🔹 MAIN EVALUATION METHOD
+    // MAIN EVALUATION METHOD
     public static double evaluate(String expression) {
 
         Stack<Double> operandStack = new Stack<>();
         Stack<Character> operatorStack = new Stack<>();
 
-        System.out.println("\nStep-by-step:");
+        System.out.println("Step-by-step:");
 
         for (int i = 0; i < expression.length(); i++) {
 
             char ch = expression.charAt(i);
 
-            // HANDLE NUMBER (multi-digit & decimal)
+            // HANDLE NUMBER
             if (isNumber(ch)) {
 
                 StringBuilder num = new StringBuilder();
@@ -62,7 +61,6 @@ public class InfixExpressionEvaluator {
                 System.out.println("Push number: " + value);
             }
 
-            // '('
             else if (ch == '(') {
                 operatorStack.push(ch);
                 System.out.println("Push operator: (");
