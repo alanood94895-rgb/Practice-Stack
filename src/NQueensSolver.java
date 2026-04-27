@@ -60,3 +60,10 @@ public static int solveNQueens(int n) {
             Position pos = new Position(row, col);
 
             if (isSafe(pos, stack)) {
+                stack.push(pos);
+                row++;
+                col = 0;
+                placed = true;
+                break;
+            }
+            }
