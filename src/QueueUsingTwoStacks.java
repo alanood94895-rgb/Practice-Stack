@@ -7,6 +7,7 @@ public class QueueUsingTwoStacks {
         Stack<T> outputStack = new Stack<>();
 
         public static void main(String[] args) {
+            QueueUsingTwoStacks<Integer> queue = new QueueUsingTwoStacks<>();
 
         }
 }
