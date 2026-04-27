@@ -101,3 +101,29 @@ public static void visualizeSpans(int[] prices, int[] spans) {
         for (int j = 0; j < spans[i]; j++) {
             System.out.print("*");
         }
+        System.out.println();
+    }
+}
+
+// 🔹 STEP-BY-STEP PROCESS
+public static void calculateSpanStepByStep(int[] prices) {
+
+    Stack<Integer> stack = new Stack<>();
+    int[] span = new int[prices.length];
+
+    for (int i = 0; i < prices.length; i++) {
+
+        System.out.println("\nDay " + (i + 1) + " Price: " + prices[i]);
+
+        while (!stack.isEmpty() && prices[stack.peek()] <= prices[i]) {
+            int popped = stack.pop();
+            System.out.println("Pop index " + popped + " (price " + prices[popped] + ")");
+        }
+
+        if (stack.isEmpty()) span[i] = i + 1;
+        else span[i] = i - stack.peek();
+
+        stack.push(i);
+
+        System.out.println("Span: " + span[i]);
+        System.out.print("Stack: ");
