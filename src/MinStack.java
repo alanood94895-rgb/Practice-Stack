@@ -1,6 +1,5 @@
 import java.util.Stack;
 
-// Approach 2: Optimized Min Stack
 public class MinStack {
 
     Stack<Integer> mainStack = new Stack<>();
