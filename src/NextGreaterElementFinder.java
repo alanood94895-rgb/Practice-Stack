@@ -14,7 +14,7 @@ public class NextGreaterElementFinder {
         };
 
         for (int[] arr : testArrays) {
-            System.out.println("");
+            System.out.println("testArrays");
 
             int[] nge = findNextGreaterElement(arr);
             displayResults(arr, nge);
