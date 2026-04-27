@@ -25,7 +25,7 @@ public class QueueUsingTwoStacks<T> {
         queue.dequeue();
         queue.dequeue(); // test empty later
         queue.dequeue(); // edge case
-        queue.peek();    // edge case
+        queue.peek();
     }
 
     // 🔹 ENQUEUE
