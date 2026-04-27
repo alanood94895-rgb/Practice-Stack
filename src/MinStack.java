@@ -65,7 +65,7 @@ public class MinStack {
             minStack.pop();
         }
 
-        System.out.println("\nPop: " + removed);
+        System.out.println("Pop: " + removed);
         display();
     }
 
