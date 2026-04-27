@@ -138,6 +138,10 @@ public static void solveNQueensStepByStep(int n) {
                 row = last.row;
                 col = last.col + 1;
             }
+            if (row == n) {
+                System.out.println("Solution Found!");
+                displayBoard(stack, n);
 
+                stack.pop();
         }
         }
