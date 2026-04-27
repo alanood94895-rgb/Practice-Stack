@@ -51,3 +51,13 @@ public class StackSorter {
 
         }
 }
+/ Move elements back if needed
+            while (!tempStack.isEmpty() && tempStack.peek() < temp) {
+        int moved = tempStack.pop();
+        stack.push(moved);
+        System.out.println("Move back: " + moved);
+    }
+
+            tempStack.push(temp);
+            System.out.println("Push to tempStack: " + temp);
+
