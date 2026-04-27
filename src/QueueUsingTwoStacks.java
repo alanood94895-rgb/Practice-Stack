@@ -48,6 +48,22 @@ public class QueueUsingTwoStacks {
                 displayState();
                 return value;
             }
+            // 🔹 PEEK
+            public T peek() {
+
+                if (isEmpty()) {
+                    System.out.println("\nPeek: Queue is empty");
+                    return null;
+                }
+
+                if (outputStack.isEmpty()) {
+                    transfer();
+                }
+
+                T value = outputStack.peek();
+                System.out.println("\nPeek: " + value);
+                displayState();
+                return value;
         }
         }
 }
