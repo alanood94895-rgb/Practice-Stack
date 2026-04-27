@@ -88,11 +88,11 @@ public class MinStack {
             return;
         }
 
-        System.out.println("\nCurrent Min: " + minStack.peek());
+        System.out.println("Current Min: " + minStack.peek());
         display();
     }
 
-    // 🔹 DISPLAY
+    // DISPLAY
     public void display() {
 
         System.out.println("Main Stack: " + mainStack);
