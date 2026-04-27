@@ -171,3 +171,18 @@ public static void displayBoard(Stack<Position> queens, int n) {
                     break;
                 }
             }
+            if (hasQueen) System.out.print(" Q ");
+            else System.out.print(" . ");
+        }
+        System.out.println();
+    }
+
+    System.out.println("------------------");
+}
+
+// 🔹 RECURSIVE SOLUTION
+public static int solveRecursive(int n) {
+
+    if (n <= 0) return 0;
+    if (n == 1) return 1;
+    if (n == 2 || n == 3) return 0;
