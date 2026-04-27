@@ -48,6 +48,20 @@ public class NextGreaterElementFinder {
             System.out.println("Push index " + i);
             System.out.println("Stack: " + stack);
         }
+        return result;
+    }
+
+    // 🔹 NEXT SMALLER ELEMENT
+    public static int[] findNextSmallerElement(int[] arr) {
+
+        int n = arr.length;
+        int[] result = new int[n];
+
+        for (int i = 0; i < n; i++) result[i] = -1;
+
+        Stack<Integer> stack = new Stack<>();
+
+        for (int i = 0; i < n; i++) {
 
     }
       }
