@@ -84,5 +84,9 @@ public class NextGreaterElementFinder {
 
             int index = i % n;
     }
+        while (!stack.isEmpty() && arr[stack.peek()] < arr[index]) {
+            int idx = stack.pop();
+            result[idx] = arr[index];
+        }
       }
 }
