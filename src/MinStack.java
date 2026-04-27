@@ -84,5 +84,10 @@ public class MinStack {
         display();
     }
     // 🔹 DISPLAY
+    public void display() {
 
+        System.out.println("Main Stack: " + mainStack);
+        System.out.println("Min Stack:  " + minStack);
+
+        if (!minStack.isEmpty()) {
 }
