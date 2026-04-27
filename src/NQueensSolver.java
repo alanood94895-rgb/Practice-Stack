@@ -187,8 +187,6 @@ public class NQueensSolver {
             }
             System.out.println();
         }
-
-        System.out.println("------------------");
     }
 
     // 🔹 RECURSIVE SOLUTION
