@@ -80,11 +80,6 @@ public class StackSorter {
 
         int temp = stack.pop();
 
-        // Sort stack
-        sortStackRecursive(stack);
-
-        // Insert in correct position
-        insertInSortedOrder(stack, temp);
     }
 
     // 🔹 INSERT IN SORTED ORDER (HELPER)
