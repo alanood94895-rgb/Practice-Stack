@@ -41,7 +41,7 @@ public class NextGreaterElementFinder {
 
         Stack<Integer> stack = new Stack<>();
 
-        System.out.println("\nStep-by-step (Next Greater):");
+        System.out.println("Step-by-step (Next Greater):");
 
         for (int i = 0; i < n; i++) {
 
