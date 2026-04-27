@@ -81,3 +81,14 @@ public static int solveNQueens(int n) {
         col = last.col + 1;
     }
     }
+// Solution found
+            if (row == n) {
+solutions++;
+        stack.pop(); // backtrack
+row--;
+col = stack.isEmpty() ? 0 : stack.peek().col + 1;
+        }
+        }
+
+        return solutions;
+    }
