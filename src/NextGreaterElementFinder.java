@@ -20,7 +20,7 @@ public class NextGreaterElementFinder {
             displayResults(arr, nge);
 
             int[] nse = findNextSmallerElement(arr);
-            System.out.println("\nNext Smaller Element:");
+            System.out.println("Next Smaller Element:");
             displayResults(arr, nse);
 
             int[] circular = findNextGreaterElementCircular(arr);
