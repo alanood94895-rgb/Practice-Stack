@@ -38,7 +38,7 @@ public class InfixToPostfixConverter {
         }
     }
 
-    // INFIX → POSTFIX
+    // infix To Postfix
     public static String infixToPostfix(String infix) {
 
         Stack<Character> ops = new Stack<>();
