@@ -28,7 +28,7 @@ public class MinStack {
         stack.getMin();
 
         // Demonstrate Approach 1
-        System.out.println("Approach 1 (Pair Method) ");
+        System.out.println("Pair Method) ");
         PairMinStack pairStack = new PairMinStack();
         pairStack.push(5);
         pairStack.push(3);
