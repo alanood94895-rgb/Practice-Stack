@@ -39,7 +39,7 @@ public class QueueUsingTwoStacks<T> {
     public T dequeue() {
 
         if (isEmpty()) {
-            System.out.println("\nDequeue: Queue is empty");
+            System.out.println("Dequeue: Queue is empty");
             return null;
         }
 
