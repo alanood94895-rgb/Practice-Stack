@@ -126,6 +126,27 @@ public class InfixToPostfixConverter {
                         default: return 0;
                     }
                 }
+                public static boolean isOperator(char ch) {
+                    return ch == '+' || ch == '-' || ch == '*' ||
+                            ch == '/' || ch == '%' || ch == '^';
+                }
+
+                // APPLY OPERATION
+                public static double applyOperation(double a, double b, char op) {
+
+                    switch (op) {
+                        case '+': return a + b;
+                        case '-': return a - b;
+                        case '*': return a * b;
+                        case '/':
+                            if (b == 0) throw new ArithmeticException("Division by zero");
+                            return a / b;
+                        case '%': return a % b;
+                        case '^': return Math.pow(a, b);
+                    }
+
+                    throw new RuntimeException("Unknown operator");
+                }
 
 
             }
