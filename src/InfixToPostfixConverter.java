@@ -20,7 +20,11 @@ public class InfixToPostfixConverter {
 
             String postfix = infixToPostfix(infix);
             System.out.println("Final Postfix: " + postfix);
+            double result = PostfixEvaluator.evaluatePostfix(postfix);
+            System.out.println("Result: " + result);
 
+            System.out.println("Error: " + e.getMessage());
+        }
 
         }
     }
