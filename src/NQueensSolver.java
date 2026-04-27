@@ -200,3 +200,16 @@ public static int solveHelper(int row, int n, Stack<Position> queens) {
     for (int col = 0; col < n; col++) {
 
         Position pos = new Position(row, col);
+
+        if (isSafe(pos, queens)) {
+            queens.push(pos);
+
+            count += solveHelper(row + 1, n, queens);
+
+            queens.pop(); // backtrack
+        }
+    }
+
+    return count;
+}
+}
