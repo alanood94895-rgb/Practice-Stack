@@ -111,6 +111,5 @@ public class QueueUsingTwoStacks<T> {
         }
 
         System.out.println("Size: " + size());
-        System.out.println("---------------------------");
     }
 }
