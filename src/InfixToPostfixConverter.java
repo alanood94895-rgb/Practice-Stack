@@ -13,5 +13,6 @@ public class InfixToPostfixConverter {
                 "20 / (5 - 5)"
 
         };
+        for (String infix : expressions) {
     }
 }
