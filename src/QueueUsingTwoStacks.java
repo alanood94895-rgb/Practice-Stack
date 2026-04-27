@@ -65,5 +65,9 @@ public class QueueUsingTwoStacks {
                 displayState();
                 return value;
         }
+            // 🔹 CHECK EMPTY
+            public boolean isEmpty() {
+                return inputStack.isEmpty() && outputStack.isEmpty();
+            }
         }
 }
