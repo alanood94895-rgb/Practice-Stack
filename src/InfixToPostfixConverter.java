@@ -1,6 +1,7 @@
 public class InfixToPostfixConverter {
     public static void main(String[] args){
 
+        // 8 different infix expressions
         String[] expressions = {
                 "3 + 4 * 2",
                 "(1 + 2) * 3",
