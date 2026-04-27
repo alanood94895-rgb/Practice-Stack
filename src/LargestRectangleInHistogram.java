@@ -111,7 +111,7 @@ public class LargestRectangleInHistogram {
 
         for (int level = max; level > 0; level--) {
             for (int h : heights) {
-                if (h >= level) System.out.print("█ ");
+                if (h >= level) System.out.print("");
                 else System.out.print("  ");
             }
             System.out.println();
