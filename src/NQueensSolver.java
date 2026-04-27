@@ -55,3 +55,8 @@ public static int solveNQueens(int n) {
     while (true) {
 
         boolean placed = false;
+        while (col < n) {
+
+            Position pos = new Position(row, col);
+
+            if (isSafe(pos, stack)) {
