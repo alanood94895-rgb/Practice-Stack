@@ -67,3 +67,11 @@ public class StackSorter {
 
         return tempStack;
     }
+// 🔹 RECURSIVE SORT
+public static void sortStackRecursive(Stack<Integer> stack) {
+
+    if (stack.isEmpty()) {
+        return;
+    }
+
+    int temp = stack.pop();
