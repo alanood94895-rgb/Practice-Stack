@@ -43,7 +43,7 @@ public class NextGreaterElementFinder {
 
         for (int i = 0; i < n; i++) {
 
-            System.out.println("\nProcessing index " + i + " value " + arr[i]);
+            System.out.println("Processing index " + i + " value " + arr[i]);
 
             while (!stack.isEmpty() && arr[stack.peek()] < arr[i]) {
                 int idx = stack.pop();
