@@ -36,3 +36,10 @@ public static boolean isSafe(Position pos, Stack<Position> queens) {
 
 // same column
         if (q.col == pos.col) return false;
+        // diagonal
+        if (Math.abs(q.row - pos.row) == Math.abs(q.col - pos.col))
+            return false;
+    }
+
+    return true;
+}
