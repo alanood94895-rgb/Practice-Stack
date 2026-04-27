@@ -47,7 +47,7 @@ public class StackSorter {
 
         Stack<Integer> tempStack = new Stack<>();
 
-        System.out.println("\nStep-by-step sorting:");
+        System.out.println("Step-by-step sorting:");
 
         while (!stack.isEmpty()) {
 
