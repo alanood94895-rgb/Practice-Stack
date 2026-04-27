@@ -98,7 +98,6 @@ public class StockSpanCalculator {
             System.out.print("Day " + (i + 1) + " Price:");
 
             for (int j = 0; j < prices[i] / 10; j++) {
-                System.out.print("█");
             }
 
             System.out.print("  Span:");
