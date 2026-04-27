@@ -61,3 +61,9 @@ public class StackSorter {
             tempStack.push(temp);
             System.out.println("Push to tempStack: " + temp);
 
+ System.out.println("Original: " + stack);
+            System.out.println("Temp:     " + tempStack);
+}
+
+        return tempStack;
+    }
