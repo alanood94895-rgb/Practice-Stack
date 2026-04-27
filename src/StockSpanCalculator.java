@@ -84,14 +84,14 @@ public class StockSpanCalculator {
         System.out.println("Day Price Span");
 
         for (int i = 0; i < prices.length; i++) {
-            System.out.println((i + 1) + "\t" + prices[i] + "\t" + spans[i]);
+            System.out.println((i + 1) + "t" + prices[i] + "t" + spans[i]);
         }
     }
 
-    // 🔹 VISUALIZATION
+    // VISUALIZATION
     public static void visualizeSpans(int[] prices, int[] spans) {
 
-        System.out.println("\nVisualization:");
+        System.out.println("Visualization:");
 
         for (int i = 0; i < prices.length; i++) {
 
