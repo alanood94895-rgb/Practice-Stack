@@ -55,7 +55,7 @@ public class StackSorter {
             System.out.println("Popped: " + temp);
 
 
-            while (!tempStack.isEmpty() && tempStack.peek() < temp) {
+            while (tempStack.isEmpty() && tempStack.peek() < temp) {
                 int moved = tempStack.pop();
                 stack.push(moved);
                 System.out.println("Move back: " + moved);
