@@ -9,5 +9,18 @@ public class StockSpanCalculator {
                 {},
                 {20, 20, 20, 20}
         };
+        for (int[] prices : testCases) {
+            System.out.println("\n==============================");
 
+            int[] spans = calculateSpan(prices);
+            displayResults(prices, spans);
+            visualizeSpans(prices, spans);
+
+            int[] brute = calculateSpanBruteForce(prices);
+
+            System.out.println("\nBrute Force Spans:");
+            printArray(brute);
+
+            analyzeSpans(spans);
+        }
     }
