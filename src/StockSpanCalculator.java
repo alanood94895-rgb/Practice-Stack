@@ -41,7 +41,7 @@ public class StockSpanCalculator {
 
         for (int i = 0; i < n; i++) {
 
-            while (!stack.isEmpty() && prices[stack.peek()] <= prices[i]) {
+            while (stack.isEmpty() && prices[stack.peek()] <= prices[i]) {
                 stack.pop();
             }
 
