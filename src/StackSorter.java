@@ -22,5 +22,20 @@ public class StackSorter {
             return stack;
         }
     }
+    public static void processStack(Stack<Integer> stack, String name) {
+
+        System.out.println("\n==============================");
+        System.out.println(name);
+
+        displayStack(stack, "Original");
+
+        Stack<Integer> sorted = sortStack(stack);
+
+        displayStack(sorted, "Sorted (Iterative)");
+
+        // Recursive version
+        sortStackRecursive(sorted);
+        displayStack(sorted, "Sorted (Recursive)");
+    }
     }
 }
