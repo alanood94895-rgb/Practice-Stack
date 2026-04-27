@@ -1,142 +1,42 @@
 import java.util.Stack;
 
 public class MinStack {
-
-    Stack<Integer> mainStack = new Stack<>();
-    Stack<Integer> minStack = new Stack<>();
-
+    static Stack<Integer> mainStack =new Stack<>();
+    static Stack<Integer> minStack =new Stack<>();
     public static void main(String[] args) {
+        push(5);
+        push(3);
+        push(10);
+        push(30);
+        push(2);
+        display();
+        System.out.println("Getmin : "+GetMin());
+        System.out.println("Popped : "+pop());
 
-        MinStack stack = new MinStack();
-
-        // 15 operations
-        stack.push(5);
-        stack.push(3);
-        stack.push(7);
-        stack.getMin();
-        stack.push(2);
-        stack.push(8);
-        stack.getMin();
-        stack.pop();
-        stack.pop();
-        stack.getMin();
-        stack.peek();
-        stack.pop();
-        stack.pop();
-        stack.pop();
-        stack.pop();
-        stack.getMin();
-
-
-        System.out.println("Pair Method) ");
-        PairMinStack pairStack = new PairMinStack();
-        pairStack.push(5);
-        pairStack.push(3);
-        pairStack.push(7);
-        pairStack.push(2);
-        pairStack.display();
     }
-
-    // PUSH
-    public void push(int value) {
-
+    public static void  push(int value){
         mainStack.push(value);
-
-        // Update minStack
-        if (minStack.isEmpty() || value <= minStack.peek()) {
+        if (minStack.isEmpty() || value<=minStack.peek()){
             minStack.push(value);
         }
-
-        System.out.println("Push: " + value);
-        display();
     }
-
-    // POP
-    public void pop() {
-
+    public static int pop() {
         if (mainStack.isEmpty()) {
-            System.out.println("Pop: Stack is empty");
-            return;
+            System.out.println("Stack is empty cannot pop.");
+            return -1;
         }
-
-        int removed = mainStack.pop();
-
-        if (minStack.isEmpty() && removed == minStack.peek()) {
+        int popped = mainStack.pop();
+        if (popped == minStack.peek()) {
             minStack.pop();
         }
-
-        System.out.println("Pop: " + removed);
-        display();
+        return popped;
+    }
+    public static Integer GetMin(){
+        return minStack.peek();
+    }
+    public static void display() {
+        System.out.println("mainStack: " + mainStack);
+        System.out.println("minStack:  " + minStack);
     }
 
-    // PEEK
-    public void peek() {
-
-        if (mainStack.isEmpty()) {
-            System.out.println("Peek: Stack is empty");
-            return;
-        }
-
-        System.out.println("Peek: " + mainStack.peek());
-        display();
-    }
-
-    public void getMin() {
-
-        if (minStack.isEmpty()) {
-            System.out.println("Min: Stack is empty");
-            return;
-        }
-
-        System.out.println("Current Min: " + minStack.peek());
-        display();
-    }
-
-    // DISPLAY
-    public void display() {
-
-        System.out.println("Main Stack: " + mainStack);
-        System.out.println("Min Stack:  " + minStack);
-
-        if (!minStack.isEmpty()) {
-            System.out.println("Min Value: " + minStack.peek());
-        }
-
-    }
-}
-
-class PairMinStack {
-
-    static class Pair {
-        int value;
-        int min;
-
-        Pair(int value, int min) {
-            this.value = value;
-            this.min = min;
-        }
-
-        public String toString() {
-            return "(" + value + "," + min + ")";
-        }
-    }
-
-    Stack<Pair> stack = new Stack<>();
-
-    public void push(int value) {
-
-        if (stack.isEmpty()) {
-            stack.push(new Pair(value, value));
-        } else {
-            int currentMin = Math.min(value, stack.peek().min);
-            stack.push(new Pair(value, currentMin));
-        }
-    }
-
-    public void display() {
-        System.out.println("Stack (value,min): " + stack);
-        if (!stack.isEmpty()) {
-            System.out.println("Min: " + stack.peek().min);
-        }
-    }
 }
