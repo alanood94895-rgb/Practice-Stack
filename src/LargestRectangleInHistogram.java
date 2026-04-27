@@ -105,4 +105,20 @@ public static void displayHistogram(int[] heights) {
         System.out.println("Empty");
         return;
     }
+    int max = 0;
+    for (int h : heights) max = Math.max(max, h);
+
+    for (int level = max; level > 0; level--) {
+        for (int h : heights) {
+            if (h >= level) System.out.print("█ ");
+            else System.out.print("  ");
+        }
+        System.out.println();
+    }
+
+    // base line
+    for (int i = 0; i < heights.length; i++) {
+        System.out.print("--");
+    }
+    System.out.println();
 
