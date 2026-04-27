@@ -110,3 +110,23 @@ public static void solveNQueensStepByStep(int n) {
         boolean placed = false;
 
         while (col < n) {
+
+            Position pos = new Position(row, col);
+
+            System.out.println("Trying: " + pos);
+
+            if (isSafe(pos, stack)) {
+                stack.push(pos);
+                System.out.println("Placed: " + pos);
+                displayStack(stack);
+                displayBoard(stack, n);
+
+                row++;
+                col = 0;
+                placed = true;
+                break;
+            }
+
+            col++;
+        }
+        }
