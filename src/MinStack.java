@@ -29,6 +29,9 @@ public class MinStack {
             pairStack.push(5);
             pairStack.push(3);
             pairStack.push(7);
+            pairStack.push(2);
+            pairStack.display();
+        }
 
         }
 }
