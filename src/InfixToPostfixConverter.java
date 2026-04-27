@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 public class InfixToPostfixConverter {
     public static void main(String[] args){
 
@@ -15,6 +17,9 @@ public class InfixToPostfixConverter {
         };
         for (String infix : expressions) {
             System.out.println("Infix: " + infix);
+
+            String postfix = infixToPostfix(infix);
+
 
         }
     }
