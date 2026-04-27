@@ -81,5 +81,11 @@ public class QueueUsingTwoStacks {
             while (!inputStack.isEmpty()) {
                 outputStack.push(inputStack.pop());
             }
-        }
+            // 🔹 DISPLAY STATE
+            public void displayState() {
+
+                System.out.println("Input Stack:  " + inputStack);
+                System.out.println("Output Stack: " + outputStack);
+
+            }
 }
