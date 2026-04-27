@@ -186,3 +186,17 @@ public static int solveRecursive(int n) {
     if (n <= 0) return 0;
     if (n == 1) return 1;
     if (n == 2 || n == 3) return 0;
+    return solveHelper(0, n, new Stack<>());
+}
+
+public static int solveHelper(int row, int n, Stack<Position> queens) {
+
+    if (row == n) {
+        return 1;
+    }
+
+    int count = 0;
+
+    for (int col = 0; col < n; col++) {
+
+        Position pos = new Position(row, col);
