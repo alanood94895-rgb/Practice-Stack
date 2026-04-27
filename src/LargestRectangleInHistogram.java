@@ -145,7 +145,6 @@ public class LargestRectangleInHistogram {
         System.out.println("Single pass using stack → O(n)");
     }
 
-    // 🔹 BONUS: BINARY MATRIX
     public static int largestRectangleInMatrix(int[][] matrix) {
 
         if (matrix.length == 0) return 0;
