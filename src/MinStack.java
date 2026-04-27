@@ -72,4 +72,15 @@ public class MinStack {
             display();
         }
         }
+    // 🔹 GET MIN (O(1))
+    public void getMin() {
+
+        if (minStack.isEmpty()) {
+            System.out.println("\nMin: Stack is empty");
+            return;
+        }
+
+        System.out.println("\nCurrent Min: " + minStack.peek());
+        display();
+    }
 }
