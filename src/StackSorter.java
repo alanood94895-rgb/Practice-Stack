@@ -82,7 +82,7 @@ public class StackSorter {
 
     }
 
-    // 🔹 INSERT IN SORTED ORDER (HELPER)
+    // INSERT IN SORTED ORDER (HELPER)
     public static void insertInSortedOrder(Stack<Integer> stack, int value) {
 
         if (stack.isEmpty() || stack.peek() <= value) {
