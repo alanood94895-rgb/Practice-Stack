@@ -66,7 +66,8 @@ public class NextGreaterElementFinder {
                 int idx = stack.pop();
                 result[idx] = arr[i];
             }
-
+            stack.push(i);
+        }
     }
       }
 }
