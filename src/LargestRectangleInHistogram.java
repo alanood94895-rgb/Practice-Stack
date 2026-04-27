@@ -32,3 +32,17 @@ public static int findLargestRectangle(int[] heights) {
         System.out.println("Empty histogram.");
         return 0;
     }
+    Stack<Integer> stack = new Stack<>();
+    int maxArea = 0;
+    int i = 0;
+
+    System.out.println("\nStep-by-step:");
+
+    while (i < heights.length) {
+
+        // PUSH if increasing
+        if (stack.isEmpty() || heights[i] >= heights[stack.peek()]) {
+            stack.push(i);
+            System.out.println("Push index " + i);
+            i++;
+        } else {
