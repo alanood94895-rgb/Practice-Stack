@@ -113,5 +113,12 @@ public class MinStack {
         return "(" + value + "," + min + ")";
     }
 }
+Stack<Pair> stack = new Stack<>();
+
+public void push(int value) {
+
+    if (stack.isEmpty()) {
+        stack.push(new Pair(value, value));
+    } else {
 
 }
