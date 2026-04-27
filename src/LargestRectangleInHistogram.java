@@ -84,7 +84,7 @@ public class LargestRectangleInHistogram {
             maxArea = Math.max(maxArea, area);
 
             System.out.println("Final pop " + top +
-                    " → area=" + area);
+                    "area=" + area);
         }
 
         return maxArea;
