@@ -69,3 +69,40 @@ public static int findLargestRectangle(int[] heights) {
         System.out.println("Stack: " + stack);
     }
         }
+// PROCESS REMAINING STACK
+        while (!stack.isEmpty()) {
+int top = stack.pop();
+int height = heights[top];
+
+int width;
+            if (stack.isEmpty()) {
+width = i;
+            } else {
+width = i - stack.peek() - 1;
+        }
+
+int area = height * width;
+maxArea = Math.max(maxArea, area);
+
+            System.out.println("Final pop " + top +
+        " → area=" + area);
+              }
+
+                      return maxArea;
+    }
+
+// 🔹 AREA HELPER
+public static int calculateArea(int[] heights, int start, int end, int height) {
+    return height * (end - start + 1);
+}
+
+// 🔹 DISPLAY HISTOGRAM (ASCII)
+public static void displayHistogram(int[] heights) {
+
+    System.out.println("Histogram:");
+
+    if (heights.length == 0) {
+        System.out.println("Empty");
+        return;
+    }
+
