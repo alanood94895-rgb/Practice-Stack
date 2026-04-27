@@ -126,7 +126,6 @@ public class NextGreaterElementFinder {
     // COMPARISON
     public static void compareApproaches() {
 
-        System.out.println("\n==============================");
         System.out.println("Comparison:");
 
         System.out.println("Brute Force:");
