@@ -75,3 +75,9 @@ public static void sortStackRecursive(Stack<Integer> stack) {
     }
 
     int temp = stack.pop();
+// Sort remaining stack
+    sortStackRecursive(stack);
+
+    // Insert in correct position
+    insertInSortedOrder(stack, temp);
+}
