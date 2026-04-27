@@ -123,6 +123,9 @@ public void push(int value) {
         int currentMin = Math.min(value, stack.peek().min);
         stack.push(new Pair(value, currentMin));
     }
+    public void display() {
+        System.out.println("Stack (value,min): " + stack);
+        if (!stack.isEmpty()) {
 }
 
     }
