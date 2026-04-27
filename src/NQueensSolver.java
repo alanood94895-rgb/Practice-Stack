@@ -160,7 +160,7 @@ public class NQueensSolver {
         }
     }
 
-    // 🔹 DISPLAY STACK
+    // DISPLAY STACK
     public static void displayStack(Stack<Position> stack) {
         System.out.println("Stack: " + stack);
     }
