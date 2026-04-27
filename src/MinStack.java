@@ -36,6 +36,13 @@ public class MinStack {
         public void push(int value) {
 
             mainStack.push(value);
+            // Update minStack
+            if (minStack.isEmpty() || value <= minStack.peek()) {
+                minStack.push(value);
+            }
 
+            System.out.println("\nPush: " + value);
+            display();
+        }
         }
 }
