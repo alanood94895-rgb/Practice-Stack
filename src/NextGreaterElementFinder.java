@@ -113,3 +113,5 @@ public static void displayResults(int[] arr, int[] result) {
 }
 // 🔹 COMPARISON
 public static void compareApproaches() {
+    System.out.println("\n==============================");
+    System.out.println("Comparison:");
