@@ -67,3 +67,9 @@ public static int solveNQueens(int n) {
                 break;
             }
             }
+
+        col++;
+    }
+
+    // If not placed → backtrack
+    if (!placed) {
