@@ -46,3 +46,26 @@ public static int findLargestRectangle(int[] heights) {
             System.out.println("Push index " + i);
             i++;
         } else {
+            // POP and calculate area
+            int top = stack.pop();
+            int height = heights[top];
+
+            int width;
+            if (stack.isEmpty()) {
+                width = i;
+            } else {
+                width = i - stack.peek() - 1;
+            }
+
+            int area = height * width;
+            maxArea = Math.max(maxArea, area);
+
+            System.out.println("Pop index " + top +
+                    " → height=" + height +
+                    ", width=" + width +
+                    ", area=" + area);
+        }
+
+        System.out.println("Stack: " + stack);
+    }
+        }
