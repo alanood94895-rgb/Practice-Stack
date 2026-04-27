@@ -77,6 +77,27 @@ public class InfixToPostfixConverter {
 
                         ops.push(ch);
                     }
+                    else {
+                        throw new RuntimeException("Invalid character: " + ch);
+                    }
+
+                    // PRINT STEP
+                    System.out.println("Token: " + ch);
+                    System.out.println("Stack: " + ops);
+                    System.out.println("Output: " + output);
+                    System.out.println("-------------------");
+                }
+
+                // POP REMAINING OPERATORS
+                while (!ops.isEmpty()) {
+                    if (ops.peek() == '(')
+                        throw new RuntimeException("Unmatched parentheses");
+
+                    output.append(ops.pop()).append(" ");
+                }
+
+                return output.toString().trim();
+            }
                 }
 
             }
