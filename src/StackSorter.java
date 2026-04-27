@@ -97,7 +97,7 @@ public class StackSorter {
         stack.push(temp);
     }
 
-    // 🔹 DISPLAY STACK
+    // DISPLAY STACK
     public static void displayStack(Stack<Integer> stack, String name) {
 
         System.out.println(name + ": " + stack);
