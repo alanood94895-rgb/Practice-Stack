@@ -47,7 +47,7 @@ public class NQueensSolver {
         return true;
     }
 
-    // 🔹 ITERATIVE STACK SOLUTION
+    // ITERATIVE STACK SOLUTION
     public static int solveNQueens(int n) {
 
         if (n <= 0) return 0;
@@ -77,7 +77,7 @@ public class NQueensSolver {
                 col++;
             }
 
-            // If not placed → backtrack
+            // If not placed
             if (!placed) {
 
                 if (stack.isEmpty()) break;
