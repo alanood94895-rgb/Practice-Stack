@@ -110,7 +110,7 @@ public class QueueUsingTwoStacks<T> {
             System.out.print(inputStack.get(i) + " ");
         }
 
-        System.out.println("\nSize: " + size());
+        System.out.println("Size: " + size());
         System.out.println("---------------------------");
     }
 }
