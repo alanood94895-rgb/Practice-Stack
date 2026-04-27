@@ -140,7 +140,7 @@ public class LargestRectangleInHistogram {
         System.out.println("Check all pairs O(n^2)");
 
         System.out.println("Stack Approach:");
-        System.out.println("Single pass using stack → O(n)");
+        System.out.println("Single pass using stack O(n)");
     }
 
     public static int largestRectangleInMatrix(int[][] matrix) {
