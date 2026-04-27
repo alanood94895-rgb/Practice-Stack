@@ -49,7 +49,7 @@ public class QueueUsingTwoStacks<T> {
         }
 
         T value = outputStack.pop();
-        System.out.println("\nDequeue: " + value);
+        System.out.println("Dequeue: " + value);
         displayState();
         return value;
     }
