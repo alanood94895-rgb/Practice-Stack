@@ -81,7 +81,6 @@ public class MinStack {
         display();
     }
 
-    // 🔹 GET MIN (O(1))
     public void getMin() {
 
         if (minStack.isEmpty()) {
