@@ -143,3 +143,24 @@ public static void analyzeSpans(int[] spans) {
     int max = spans[0];
     int day = 0;
     int sum = 0;
+    for (int i = 0; i < spans.length; i++) {
+        sum += spans[i];
+
+        if (spans[i] > max) {
+            max = spans[i];
+            day = i;
+        }
+    }
+
+    double avg = (double) sum / spans.length;
+
+    System.out.println("\nMax Span: " + max + " on day " + (day + 1));
+    System.out.println("Average Span: " + avg);
+}
+
+// 🔹 PRINT ARRAY
+public static void printArray(int[] arr) {
+    for (int x : arr) System.out.print(x + " ");
+    System.out.println();
+}
+}
