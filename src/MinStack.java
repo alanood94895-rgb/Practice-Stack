@@ -105,7 +105,6 @@ public class MinStack {
     }
 }
 
-// 🔹 APPROACH 1: PAIR METHOD
 class PairMinStack {
 
     static class Pair {
