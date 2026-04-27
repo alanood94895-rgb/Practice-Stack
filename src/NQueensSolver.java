@@ -155,3 +155,19 @@ public static void displayStack(Stack<Position> stack) {
 }
 
         }
+// 🔹 DISPLAY BOARD (ASCII)
+public static void displayBoard(Stack<Position> queens, int n) {
+
+    System.out.println("Board:");
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+
+            boolean hasQueen = false;
+
+            for (Position q : queens) {
+                if (q.row == i && q.col == j) {
+                    hasQueen = true;
+                    break;
+                }
+            }
