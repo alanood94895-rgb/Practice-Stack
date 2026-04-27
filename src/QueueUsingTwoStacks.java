@@ -35,7 +35,7 @@ public class QueueUsingTwoStacks<T> {
         displayState();
     }
 
-    // 🔹 DEQUEUE
+    // DEQUEUE
     public T dequeue() {
 
         if (isEmpty()) {
