@@ -4,6 +4,7 @@ public class InfixToPostfixConverter {
         String[] expressions = {
                 "3 + 4 * 2",
                 "(1 + 2) * 3",
+                "10 + 2 * 6",
 
         };
     }
