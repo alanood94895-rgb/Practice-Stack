@@ -83,3 +83,21 @@ public static void displayResults(int[] prices, int[] spans) {
         System.out.println((i + 1) + "\t" + prices[i] + "\t" + spans[i]);
     }
 }
+// 🔹 VISUALIZATION
+public static void visualizeSpans(int[] prices, int[] spans) {
+
+    System.out.println("\nVisualization:");
+
+    for (int i = 0; i < prices.length; i++) {
+
+        System.out.print("Day " + (i + 1) + " Price:");
+
+        for (int j = 0; j < prices[i] / 10; j++) {
+            System.out.print("█");
+        }
+
+        System.out.print("  Span:");
+
+        for (int j = 0; j < spans[i]; j++) {
+            System.out.print("*");
+        }
