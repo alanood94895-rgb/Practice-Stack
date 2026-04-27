@@ -21,7 +21,7 @@ public class StockSpanCalculator {
 
             int[] brute = calculateSpanBruteForce(prices);
 
-            System.out.println("\nBrute Force Spans:");
+            System.out.println("Brute Force Spans:");
             printArray(brute);
 
             analyzeSpans(spans);
