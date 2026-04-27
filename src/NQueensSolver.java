@@ -99,3 +99,14 @@ public static void displayAllSolutions(int n) {
 
     System.out.println("Total Solutions: " + count);
 }
+// 🔹 STEP-BY-STEP (FOR N=4)
+public static void solveNQueensStepByStep(int n) {
+
+    Stack<Position> stack = new Stack<>();
+    int row = 0, col = 0;
+
+    while (true) {
+
+        boolean placed = false;
+
+        while (col < n) {
