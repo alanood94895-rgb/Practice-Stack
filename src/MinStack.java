@@ -84,7 +84,7 @@ public class MinStack {
     public void getMin() {
 
         if (minStack.isEmpty()) {
-            System.out.println("\nMin: Stack is empty");
+            System.out.println("Min: Stack is empty");
             return;
         }
 
