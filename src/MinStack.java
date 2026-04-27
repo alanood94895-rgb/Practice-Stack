@@ -107,4 +107,11 @@ public class MinStack {
                 this.min = min;
 }
         }
+    }
+
+    public String toString() {
+        return "(" + value + "," + min + ")";
+    }
+}
+
 }
