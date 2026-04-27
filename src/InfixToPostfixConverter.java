@@ -48,7 +48,7 @@ public class InfixToPostfixConverter {
 
             char ch = infix.charAt(i);
 
-            // NUMBER (multi-digit + decimal)
+
             if (Character.isDigit(ch) || ch == '.') {
                 StringBuilder number = new StringBuilder();
 
