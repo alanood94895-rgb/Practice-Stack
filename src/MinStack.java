@@ -127,7 +127,10 @@ public void push(int value) {
         System.out.println("Stack (value,min): " + stack);
         if (!stack.isEmpty()) {
 }
-
+        System.out.println("Min: " + stack.peek().min);
+    }
+}
+}
     }
 
 }
