@@ -7,5 +7,7 @@ public class MinStack {
         public static void main(String[] args) {
             MinStack stack = new MinStack();
 
-    }
+            stack.push(5);
+
+        }
 }
