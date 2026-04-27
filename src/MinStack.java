@@ -51,7 +51,7 @@ public class MinStack {
         display();
     }
 
-    // 🔹 POP
+    // POP
     public void pop() {
 
         if (mainStack.isEmpty()) {
