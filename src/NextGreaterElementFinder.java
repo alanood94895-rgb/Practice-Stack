@@ -20,5 +20,13 @@ public class NextGreaterElementFinder {
               System.out.println("\nCircular Next Greater:");
               displayResults(arr, circular);
           }
+          compareApproaches();
+      }
+
+    // 🔹 NEXT GREATER ELEMENT (O(n))
+    public static int[] findNextGreaterElement(int[] arr) {
+
+        int n = arr.length;
+        int[] result = new int[n];
       }
 }
