@@ -47,7 +47,7 @@ public class MinStack {
             minStack.push(value);
         }
 
-        System.out.println("\nPush: " + value);
+        System.out.println("Push: " + value);
         display();
     }
 
