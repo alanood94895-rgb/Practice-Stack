@@ -6,5 +6,7 @@ public class QueueUsingTwoStacks {
         Stack<T> inputStack = new Stack<>();
         Stack<T> outputStack = new Stack<>();
 
-    }
+        public static void main(String[] args) {
+
+        }
 }
