@@ -54,7 +54,7 @@ public class QueueUsingTwoStacks<T> {
         return value;
     }
 
-    // 🔹 PEEK
+    // PEEK
     public T peek() {
 
         if (isEmpty()) {
