@@ -31,7 +31,7 @@ public class NextGreaterElementFinder {
         compareApproaches();
     }
 
-    // 🔹 NEXT GREATER ELEMENT (O(n))
+    // NEXT GREATER ELEMENT
     public static int[] findNextGreaterElement(int[] arr) {
 
         int n = arr.length;
