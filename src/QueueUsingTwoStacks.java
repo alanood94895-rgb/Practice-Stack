@@ -67,7 +67,7 @@ public class QueueUsingTwoStacks<T> {
         }
 
         T value = outputStack.peek();
-        System.out.println("\nPeek: " + value);
+        System.out.println("Peek: " + value);
         displayState();
         return value;
     }
