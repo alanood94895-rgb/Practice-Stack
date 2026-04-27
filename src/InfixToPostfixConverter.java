@@ -104,7 +104,6 @@ public class InfixToPostfixConverter {
             System.out.println("Token: " + ch);
             System.out.println("Stack: " + ops);
             System.out.println("Output: " + output);
-            System.out.println("-------------------");
         }
 
         // POP REMAINING OPERATORS
