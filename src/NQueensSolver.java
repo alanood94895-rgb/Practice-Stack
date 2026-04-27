@@ -128,5 +128,16 @@ public static void solveNQueensStepByStep(int n) {
             }
 
             col++;
+            if (!placed) {
+
+                if (stack.isEmpty()) break;
+
+                Position last = stack.pop();
+                System.out.println("Backtrack from: " + last);
+
+                row = last.row;
+                col = last.col + 1;
+            }
+
         }
         }
