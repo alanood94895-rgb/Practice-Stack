@@ -99,7 +99,7 @@ public class NQueensSolver {
         return solutions;
     }
 
-    // 🔹 DISPLAY ALL SOLUTIONS COUNT
+    // DISPLAY ALL SOLUTIONS COUNT
     public static void displayAllSolutions(int n) {
 
         int count = solveNQueens(n);
