@@ -42,7 +42,7 @@ public class StackSorter {
         displayStack(sorted, "Sorted (Recursive)");
     }
 
-    // ITERATIVE SORT USING TEMP STACK
+    //  TEMP STACK
     public static Stack<Integer> sortStack(Stack<Integer> stack) {
 
         Stack<Integer> tempStack = new Stack<>();
