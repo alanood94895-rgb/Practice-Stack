@@ -106,7 +106,6 @@ public class NQueensSolver {
 
         System.out.println("Total Solutions: " + count);
     }
-
     // FOR N=4
     public static void solveNQueensStepByStep(int n) {
 
